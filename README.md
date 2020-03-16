@@ -247,17 +247,27 @@ Also - https://scotch.io/bar-talk/4-javascript-design-patterns-you-should-know
 
 ## System environmental Architectures
 
-1. Multi tier - https://github.com/kukuu/AGILITY/blob/master/white-paper/restfulArchitecturalDesign-2.png
+1. Multi tier 
 
-2. JWT - https://github.com/kukuu/AGILITY/blob/master/white-paper/JWT-architecture.png
+![Multi tier](https://github.com/kukuu/AGILITY/blob/master/white-paper/restfulArchitecturalDesign-2.png) 
 
-3. Micro service  - https://github.com/kukuu/Microservice-NodeJS/blob/master/microservice-snapshots/3.png
+2. JWT 
 
-4. CI/CD - https://github.com/kukuu/AGILITY/blob/master/white-paper/CI-CDL-CDPL-pipeline.jpgS
+![JWT](https://github.com/kukuu/AGILITY/blob/master/white-paper/JWT-architecture.png)- 
 
-5. Orchestrating with Kubernetes - https://github.com/kukuu/AGILITY/blob/master/white-paper/kubernetes/1.png
+3. Micro service
 
-## Designs
+![Micro service](https://github.com/kukuu/Microservice-NodeJS/blob/master/microservice-snapshots/3.png)
+
+4. CI/CD 
+
+![CI/CD ](https://github.com/kukuu/AGILITY/blob/master/white-paper/CI-CDL-CDPL-pipeline.jpgS)  
+
+5. Orchestrating with Kubernetes 
+
+![Kubernetes](https://github.com/kukuu/AGILITY/blob/master/white-paper/kubernetes/1.png)
+
+6. Microservices
 
 ![overview](https://github.com/kukuu/microservices/blob/master/architectures/microservices-4.png) 
 
