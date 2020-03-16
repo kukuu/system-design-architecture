@@ -206,15 +206,22 @@ iii. User interfaces
 
 1. Principles of Software Architecture 
 
-![PrinciplesOfSoftwareArchitecture](https://github.com/kukuu/AGILITY/blob/master/white-paper/principles-of-sw-architecture.png) 
+```
 
-       i. Business goals 
+  i. Business goals 
        
        ii. Quality Attributes 
        
        iii. Architecture
+       
+ ```
 
-2. ![DesignDecisions](https://github.com/kukuu/AGILITY/blob/master/white-paper/software-architecture-main.jpg)
+![PrinciplesOfSoftwareArchitecture](https://github.com/kukuu/AGILITY/blob/master/white-paper/principles-of-sw-architecture.png) 
+
+
+2. Design decisions
+
+![DesignDecisions](https://github.com/kukuu/AGILITY/blob/master/white-paper/software-architecture-main.jpg)
 
 
 ## How to convert monolithic to Microservices
