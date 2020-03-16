@@ -261,7 +261,7 @@ Also - https://scotch.io/bar-talk/4-javascript-design-patterns-you-should-know
 
 4. CI/CD 
 
-![CI/CD ](https://github.com/kukuu/AGILITY/blob/master/white-paper/CI-CDL-CDPL-pipeline.jpgS)  
+![CICD](https://github.com/kukuu/AGILITY/blob/master/white-paper/CI-CDL-CDPL-pipeline.jpg)  
 
 5. Orchestrating with Kubernetes 
 
@@ -272,8 +272,6 @@ Also - https://scotch.io/bar-talk/4-javascript-design-patterns-you-should-know
 ![overview](https://github.com/kukuu/microservices/blob/master/architectures/microservices-4.png) 
 
 https://github.com/kukuu/microservices-nodejs-docker-nginx/tree/master/microservice-back-end-hub-architecture
-
-https://github.com/kukuu/AGILITY/blob/master/SOA-and-MicroServices.md 
 
 ![complexity](https://github.com/kukuu/microservices-nodejs-docker-nginx/blob/master/microservice-back-end-hub-architecture/microservice-complexity.png) 
 
