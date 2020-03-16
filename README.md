@@ -271,8 +271,6 @@ Also - https://scotch.io/bar-talk/4-javascript-design-patterns-you-should-know
 
 ![overview](https://github.com/kukuu/microservices/blob/master/architectures/microservices-4.png) 
 
-https://github.com/kukuu/microservices-nodejs-docker-nginx/tree/master/microservice-back-end-hub-architecture
-
 ![complexity](https://github.com/kukuu/microservices-nodejs-docker-nginx/blob/master/microservice-back-end-hub-architecture/microservice-complexity.png) 
 
 ## Software Module Design Pattern
