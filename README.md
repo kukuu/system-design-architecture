@@ -459,6 +459,6 @@ The OWASP Top 10 list consists of the 10 most seen application vulnerabilities:
 
 2. Micro-services Best Practices - https://www.youtube.com/watch?v=9H3eICDz4-4
 
-3, CI/CD Pipeline - https://www.youtube.com/watch?v=m0a2CzgLNsc 
+3. CI/CD Pipeline - https://www.youtube.com/watch?v=m0a2CzgLNsc 
 
 4. Notification (Note - need to generate Vapid Keys)  - https://github.com/kukuu/nodejs-notification-service
