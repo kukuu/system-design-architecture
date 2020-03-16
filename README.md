@@ -100,6 +100,29 @@ iii. User interfaces
 2. Design decisions - https://github.com/kukuu/AGILITY/blob/master/white-paper/software-architecture-main.jpg
 
 
+## How to convert monolithic to Microservices
+
+Refactoring a Monolith into Microservices - https://www.nginx.com/blog/refactoring-a-monolith-into-microservices/
+```
+1. Warm Up with a Simple and Fairly Decoupled Capability. 
+   i.e Authentication and then Profile
+
+2. Minimize Dependency Back to the Monolith. i.e Buying and promotion. 
+   Buying has dependencies including promotion. Decouple promotions from buying.
+
+3. Split Sticky Capabilities Early.
+
+4. Decouple Vertically and Release the Data Early.
+
+5. Decouple What is Important to the Business and Changes Frequently.
+
+6. Decouple Capability and not Code.
+
+7. Go Macro First, then Micro.
+
+```
+
+
 ## 10 ways to avoid cross-browser compatibility issues
 
 1. Validate your code.
@@ -234,7 +257,17 @@ Also - https://scotch.io/bar-talk/4-javascript-design-patterns-you-should-know
 
 5. Orchestrating with Kubernetes - https://github.com/kukuu/AGILITY/blob/master/white-paper/kubernetes/1.png
 
-### Software Module Design Pattern
+## Designs
+
+![overview](https://github.com/kukuu/microservices/blob/master/architectures/microservices-4.png) 
+
+https://github.com/kukuu/microservices-nodejs-docker-nginx/tree/master/microservice-back-end-hub-architecture
+
+https://github.com/kukuu/AGILITY/blob/master/SOA-and-MicroServices.md 
+
+![complexity](https://github.com/kukuu/microservices-nodejs-docker-nginx/blob/master/microservice-back-end-hub-architecture/microservice-complexity.png) 
+
+## Software Module Design Pattern
 
 JavaScript modules are the most prevalently used design patterns for keeping particular pieces of code independent of other components, and consistent. This provides loose coupling to support well-structured code.
 
@@ -248,7 +281,7 @@ Modules should be Immediately-Invoked-Function-Expressions (IIFE) to allow for p
 A variation of the module pattern is called the Revealing Module Pattern. The purpose is to maintain encapsulation and reveal certain variables and methods returned in an object literal. The direct implementation looks like this.
 
 
-### Prototype Design Pattern
+## Prototype Design Pattern
 
  The Prototype design pattern relies on the JavaScript prototypical inheritance. The prototype model is used mainly for creating objects in performance-intensive situations.
 
@@ -262,14 +295,14 @@ A variation of the module pattern is called the Revealing Module Pattern. The pu
 
 Similar to Module pattern, the Prototype pattern also has a revealing variation. The Revealing Prototype Pattern provides encapsulation with public and private members since it returns an object literal.
 
-### Observer Design Pattern
+## Observer Design Pattern
 
 There are many times when one part of the application changes, other parts needs to be updated. In AngularJS, if the $scope object updates, an event can be triggered to notify another component. The observer pattern incorporates just that - if an object is modified it broadcasts to dependent objects that a change has occurred.
 
 Another prime example is the model-view-controller (MVC) architecture; The view updates when the model changes. One benefit is decoupling the view from the model to reduce dependencies.
 
 
-### Publish/Subscribe
+## Publish/Subscribe
 
 The Publish/Subscribe pattern, however, uses a topic/event channel that sits between the objects wishing to receive notifications (subscribers) and the object firing the event (the publisher). This event system allows code to define application-specific events that can pass custom arguments containing values needed by the subscriber. The idea here is to avoid dependencies between the subscriber and publisher.
 
@@ -279,7 +312,7 @@ Subscribers in the publish/subscribe pattern are notified through some messaging
 In AngularJS, a subscriber 'subscribes' to an event using $on('event', callback), and a publisher 'publishes' an event using $emit('event', args) or $broadcast('event', args).
 
 
-### Singleton
+## Singleton
 
 A Singleton only allows for a single instantiation, but many instances of the same object. The Singleton restricts clients from creating multiple objects, after the first object created, it will return instances of itself.
 
@@ -303,6 +336,7 @@ Unit tests don't work in current mainstream languages anyway because the status 
 
 If it's a throw away quick hack you know will never be re-used, unit tests might not make sense. 
 
+
 ### In practice:
 
 
@@ -310,6 +344,8 @@ Use TDD if you are implementing an isolated library-like module. If you’re not
 
 Write unit tests daily. Do not code for days, or worse weeks, and leave unit tests to the end. By that time, you will have lost most of the context. Writing unit tests is inherently dull; it’s a daunting task to write them for a week’s worth of code.
 
+
+Test coverage: https://github.com/kukuu/AGILITY/blob/master/white-paper/architectural-solutions/test-pyramid-coverage%20(1).jpg
 
 ## SonarQube 
 
@@ -319,7 +355,9 @@ Code smell: They refer to any symptom in the source code of a program that possi
 
 ## CloudBees Core
 
- Is a continuous delivery solution that provides manageability, security, best practices and supports multiple platforms, teams, and geographical locations. CloudBees Core on modern cloud platforms provides flexible, governed continuous delivery with the high availability and scalability of Kubernetes.
+Is a continuous delivery solution that provides manageability, security, best practices and supports multiple platforms, teams, and geographical locations. CloudBees Core on modern cloud platforms provides flexible, governed continuous delivery with the high availability and scalability of Kubernetes.
+
+CloudBees Core extends Jenkins with functionality that embeds best practices, supports rapid on-boarding, provides tools for easier admin management and is based on an architecture that was built for scalability. You get enterprise-level benefits along with the Jenkins automation.
 
 
 ## IIFE
@@ -408,10 +446,6 @@ The OWASP Top 10 list consists of the 10 most seen application vulnerabilities:
 3. Optimize and improve HTTP header compression
 
 4. And integrating a feature known as 'Server Push' that allows the server to deliver crucial data before the browser asks for it.
-
-## Coverage
-
-https://github.com/kukuu/AGILITY/blob/master/white-paper/architectural-solutions/test-pyramid-coverage%20(1).jpg
 
 ## Resources
 
