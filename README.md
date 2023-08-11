@@ -226,11 +226,15 @@ iii. User interfaces
 
 ```
 
-  i. Business goals 
+i. Business goals 
        
-       ii. Quality Attributes 
+ii. Quality Attributes 
        
-       iii. Architecture
+iii. Architecture
+
+iv. Design
+
+v. Code (Implementation)
        
  ```
 
@@ -471,9 +475,9 @@ In AngularJS, Singletons are prevalent, the most notable being services, factori
 
 Race conditions occur in multi-threaded applications when more than one thread tries to access the same resource. Singletons are susceptible to race conditions, such that if no instance were initialized first, two threads could then create two objects instead of returning and instance. This defeats the purpose of a singleton. Therefore, developers must be privy to synchronization when implementing singletons in multithreaded applications.
 
-## Unit Tests 
+## Unit Tests - What you need to know!
 
-Unit tests don't work in current mainstream languages anyway because the status quo pervasively includes use of globally accessible mutable state, platform dependence, and violation of encapsulation.
+Unit tests don't work in current mainstream languages anyway because the status quo pervasively includes the use of globally accessible mutable state, platform dependence, and violation of encapsulation.
 
 1. It's the usual cost/benefit analysis that may restrain Developers from writing Unit Tests.
 
