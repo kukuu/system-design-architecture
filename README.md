@@ -248,7 +248,7 @@ v. Code (Implementation)
 
 Refactoring a Monolith into Microservices - https://www.nginx.com/blog/refactoring-a-monolith-into-microservices/
 ```
-1. Warm Up with a Simple and Fairly Decoupled Capability. 
+1. Look for probable targets by researching the Monolith and warm up with a simple and fairly decoupled capability. 
    i.e Authentication and then Profile
 
 2. Minimize Dependency Back to the Monolith. i.e Buying and promotion. 
