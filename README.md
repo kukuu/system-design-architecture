@@ -339,19 +339,26 @@ MVVM Pattern
 
 ## Best practices in software engineering
 
-1. Develop iteratively.
+https://github.com/kukuu/software-engineering-best-practices/blob/main/software-engineering-best-practices.md
 
-2. Manage requirements and edge cases.
-
-3. Use component architecture.
-
-4. Model software visually.
-
-5. Verify quality.
-
-6. Control change.
-
-7. Use SOLID Principles
+1. Maintainability
+2. Modularity
+3. Version Control
+4. Testing & Quality Assurance
+5. CI/CD
+6. Security and Governance
+7. Communication and Collaboration
+8. Error Handling
+9. Documentation
+10. Performance Optimisation
+11. Agile
+12. Develop iteratively.
+13. Manage requirements and edge cases.
+14. Use component architecture.
+15. Model software visually.
+16. Verify quality.
+17. Control change.
+18. Use SOLID Principles
 
 
 ## Functional and Object Oriented Programming
