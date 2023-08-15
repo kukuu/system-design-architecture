@@ -289,7 +289,7 @@ Refactoring a Monolith into Microservices - https://www.nginx.com/blog/refactori
 
 
 
-## JS Design Ptterns
+## JS Design Patterns
 
 1. Constructor Pattern
 
