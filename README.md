@@ -365,7 +365,7 @@ https://github.com/kukuu/software-engineering-best-practices/blob/main/software-
 
 Both concepts have different methods for storing the data and how to manipulate the data. 
 
-In object oriented programming, you store the data in attributes of objects and have functions that work for that object and do the manipulation. 
+In object-oriented programming, you store the data in attributes of objects and have functions that work for that object and do the manipulation. 
 
 In functional programming, we view everything as data transformation.
 
@@ -408,7 +408,9 @@ Also - https://scotch.io/bar-talk/4-javascript-design-patterns-you-should-know
 
 3. Micro service
 
-![Micro service](https://github.com/kukuu/Microservice-NodeJS/blob/master/microservice-snapshots/3.png)
+![Micro service](https://github.com/kukuu/integration/blob/main/microservices-n.png)
+
+
 
 4. CI/CD 
 
