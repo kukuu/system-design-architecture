@@ -155,6 +155,8 @@ The data is spread out across the nodes just like the responsibility for servici
 
 The space-based architecture supports things that have unpredictable spikes by eliminating the database.
 
+Examples are PaaS, SaaS, IaaS etc.
+
 ###  Caveats
 
 i.  Finding an average or doing a statistical analysis—must be split up into subjobs, spread out across all of the nodes, and then aggregated when it’s done.
