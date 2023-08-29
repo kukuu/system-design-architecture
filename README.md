@@ -343,24 +343,26 @@ MVVM Pattern
 
 https://github.com/kukuu/software-engineering-best-practices/blob/main/software-engineering-best-practices.md
 
-1. Maintainability
-2. Modularity
-3. Version Control
-4. Testing & Quality Assurance
-5. CI/CD
-6. Security and Governance
-7. Communication and Collaboration
-8. Error Handling
-9. Documentation
-10. Performance Optimisation
-11. Agile
-12. Develop iteratively.
-13. Manage requirements and edge cases.
-14. Use component architecture.
-15. Model software visually.
-16. Verify quality.
-17. Control change.
-18. Use SOLID Principles
+1. Use SOLID Principles
+2. Maintainability
+3. Modularity
+4. Version Control
+5. Testing & Quality Assurance (Unit, Integration, TDD, BDD, User Testing, Smoke testing etc)
+6. CI/CD
+7. DevOps/DevSecOps
+8. Security and Governance
+9. Communication and Collaboration
+10. Error & Exception Handling / Validation /Authorisation / Authentication
+11. Documentation
+12. Performance Optimisation /Load Testing, Pen Testing, Ethical Hacking
+13. Agile
+14. Develop iteratively.
+15. Manage resources, requirements and edge cases during development.
+16. Use Component Architecture and Frameworks.
+17. Model software visually.
+18. Verify quality.
+19. Control change.
+
 
 
 ## Functional and Object Oriented Programming
