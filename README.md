@@ -599,6 +599,7 @@ The OWASP Top 10 list consists of the 10 most seen application vulnerabilities:
 
 8. Insecure Deserialization.
 
+..... https://owasp.org/www-project-top-ten/
 
 ## HTTP2 
 
