@@ -351,12 +351,12 @@ https://github.com/kukuu/software-engineering-best-practices/blob/main/software-
 5. Testing & Quality Assurance (Unit, Integration, TDD, BDD, User Testing, Smoke testing etc)
 6. CI/CD
 7. DevOps/DevSecOps
-8. Security and Governance
+8. Authentication, Security and Governance
 9. Communication and Collaboration
 10. Error & Exception Handling / Validation /Authorisation / Authentication
 11. Documentation
 12. Performance Optimisation /Load Testing, Pen Testing, Ethical Hacking
-13. Agile
+13. Agile 
 14. Develop iteratively.
 15. Manage resources, requirements and edge cases during development.
 16. Use Component Architecture and Frameworks.
