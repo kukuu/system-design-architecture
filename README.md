@@ -68,6 +68,7 @@ This approach is probably the most common because it is usually built around the
 
  This architecture can also contain additional open layers, like a service layer, that can be used to access shared services only in the business layer but also get bypassed for speed.
 
+https://www.canva.com/design/DAFxZ9JE5C0/2BwKSkW9e_PQfHJhCZCamA/edit?referrer=whiteboards-landing-page 
 
 #### Benefits
 
