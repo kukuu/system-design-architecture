@@ -27,7 +27,7 @@ You can use multiple patterns in a single system to optimize each section of cod
 
 Following these SOLID principles helps developers create more modular, maintainable, and adaptable software systems. By designing code with these principles in mind, developers can reduce code duplication, improve readability, and make future changes and additions to the codebase smoother and less error-prone.
 
-They work in tandem with the 4 pillars of OOP: Encapsulation, Abstraction, Polymorphism, Inheritance
+They work in tandem with the 4 pillars of OOP: Polymorphism, Inheritance, Encapsulation, and Abstraction (PIEA). 
 
 2. KISS. The “keep it simple, stupid” principle applies to pretty much all of life, but it's especially necessary for medium-to-large programming projects. 
 
