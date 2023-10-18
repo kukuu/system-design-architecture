@@ -281,7 +281,7 @@ Refactoring a Monolith into Microservices - https://www.nginx.com/blog/refactori
 
 4. Know your audience. 
 
-5. Consider using a framework. 
+5. Consider using a framework, architectures and design patterns. 
 
 6. Keep your design simple. 
 
@@ -289,7 +289,7 @@ Refactoring a Monolith into Microservices - https://www.nginx.com/blog/refactori
 
 8. Test with the difficult browsers first. 
 
-9. Use automation - Create test scripts.
+9. Use Software Engineering  Best practices:TDD, BDD, Automation  - Create test scripts, CI/CD, DevOps.
 
 
 
