@@ -39,7 +39,7 @@ They work in tandem with the 4 pillars of OOP: Polymorphism, Inheritance, Encaps
 
 6. Separation of Concerns. 
 
-7. Avoid Premature Optimization.
+7. Avoid Premature Optimization.  
 
 
 ## Architectures
