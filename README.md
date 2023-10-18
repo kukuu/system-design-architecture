@@ -295,6 +295,8 @@ Refactoring a Monolith into Microservices - https://www.nginx.com/blog/refactori
 
 ## JS Design Patterns
 
+Developers must  strive to write maintainable, readable, and reusable code. Code structuring becomes more important as applications become larger. Design patterns prove crucial to solving this challenge - providing an organization structure for common issues in a particular circumstance.
+
 1. Constructor Pattern
 
 2. Module Pattern
@@ -321,6 +323,7 @@ Refactoring a Monolith into Microservices - https://www.nginx.com/blog/refactori
 
 13. Flyweight Pattern
 
+Also - https://scotch.io/bar-talk/4-javascript-design-patterns-you-should-know 
 
 
 ## JavaScript MV* Patterns
@@ -386,21 +389,6 @@ FP treats computation as the evaluation of mathematical functions and avoids cha
 
 ## JavaScript Design Patterns     
 
-Developermust  strive to write maintainable, readable, and reusable code. Code structuring becomes more important as applications become larger. Design patterns prove crucial to solving this challenge - providing an organization structure for common issues in a particular circumstance.
-
-
-i. Constructor Pattern
-
-ii. Module Design Pattern
-
-iii. Prototype Design Pattern
-
-iv. Observer Design Pattern
-
-v. Singleton
-
-
-Also - https://scotch.io/bar-talk/4-javascript-design-patterns-you-should-know 
 
 ## System environmental Architectures
 
