@@ -386,8 +386,7 @@ FP says that data and behavior are distinctively different things and should be 
 Functional programming is stateless. ... The lack of state allows a functional language to be reasoned just by looking at a function's input and output.
 
 FP treats computation as the evaluation of mathematical functions and avoids changing-state and mutable data.
-
-## JavaScript Design Patterns     
+   
 
 
 ## System environmental Architectures
