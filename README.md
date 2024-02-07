@@ -33,7 +33,7 @@ They work in tandem with the 4 pillars of OOP: Polymorphism, Inheritance, Encaps
 2. KISS. The “keep it simple, stupid” principle applies to pretty much all of life, but it's especially necessary for medium-to-large programming projects. 
 
 3. DRY: Dont Repeat Yourself
-
+ 
 4. Develop iteratively
 
 5. Composition > Inheritance. 
