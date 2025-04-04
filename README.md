@@ -1,7 +1,7 @@
 
 # System Design & Architecture
 
-Software architecture refers to the high level structures of a software system and the discipline of creating such structures and systems. Each structure comprises software elements, relations among them, and their properties.
+Software architecture is the high level structures of a software system and the discipline of creating such structures and systems. Each structure comprises software elements, relations among them, and their properties.
 
 The architecture is a blend of technical decisions and architectural patterns, and considered the root of a software project to ensure its scalability, resilience, robustness, security, quality, cost effectiveness and longevity.
 
@@ -159,6 +159,11 @@ The data is spread out across the nodes just like the responsibility for servici
 The space-based architecture supports things that have unpredictable spikes by eliminating the database.
 
 Examples are PaaS, SaaS, IaaS etc.
+
+- https://github.com/kukuu/-integration
+- https://github.com/kukuu/aws-eco-sytem
+- https://github.com/kukuu/kubernetes
+- https://github.com/kukuu/systems-design
 
 ###  Caveats
 
