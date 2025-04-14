@@ -1,7 +1,7 @@
 
 # System Design & Architecture
 
-Software architecture is the high level structures of a software system and the discipline of creating such structures and systems. Each structure comprises software elements, relations among them, and their properties.
+Software architecture is the high level structures of a software system and the discipline of creating such structures and systems. Each structure comprises software elements, relations among them, and their properties. 
 
 The architecture is a blend of technical decisions and architectural patterns, and considered the root of a software project to ensure its scalability, resilience, robustness, security, quality, cost effectiveness and longevity.
 
