@@ -72,6 +72,8 @@ i. OAuth 2.0 (User Identity) and JWT for secure token-based access. 
 
 ii. Role-based access control (RBAC). 
 
+iii. XSS and CSRF prevention.
+
 - Data Caching and CDN (Content Delivery Network):
 
 i. Redis or Varnish for caching frequently accessed data (kEY/VALUES). 
