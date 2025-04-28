@@ -33,4 +33,8 @@ Asynchronous communication and circuit breakers mitigate the risk of cascading f
 - Flexibility:
 A modular approach allows for iterative development, making introducing new features or updating existing ones easier.
 Observability: Centralized logging and monitoring enable debugging and performance analysis for distributed services.
-Security: API Gateway and token-based authentication (OAuth2) ensure a secure entry 
+Security: API Gateway and token-based authentication (OAuth2) ensure a secure entry.
+
+## Components
+![image](https://github.com/user-attachments/assets/3180a599-56bf-4b10-9b81-fa43c0384f0a)
+
