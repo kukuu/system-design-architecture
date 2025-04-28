@@ -1,6 +1,6 @@
 # System Design Framework
 
-_Case Study for online travel: _
+_Case Study for online travel:_
 
 ## Clarifying Questions & Assumptions
 
