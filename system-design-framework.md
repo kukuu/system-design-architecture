@@ -389,4 +389,9 @@ iii. Persistent state (e.g., auth) stored securely via Keychain (iOS) or cookies
 
 ![image](https://github.com/user-attachments/assets/f1a9f119-1e10-4522-93be-41908eb9a384)
 
+## Architecture sketches:
+1. https://miro.com/app/board/uXjVPk8w1hA=/
+
+2. https://miro.com/app/board/uXjVI9Uvva0=/
+
 
