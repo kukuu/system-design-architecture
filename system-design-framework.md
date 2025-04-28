@@ -96,4 +96,34 @@ i. Docker for containerization, and migration to environments exporting consiste
 
 ii. Kubernetes for container orchestration, scaling, and failover. 
 
+## Component Breakdown:
 
+- UI Layer:
+
+i. Component Library (Storybook): Standardized UI components. 
+
+ii. Pages:
+Home, Search Results, Booking Flow, Pricing Details, and Reviews. 
+
+iii. Reusable Components:
+Buttons, forms, and modals. 
+
+iv. State Management (Redux/RTK Query):
+
+a. Local State: UI state (e.g., modal visibility). 
+
+b. Global State: Cached API responses and shared data. 
+
+c: Middleware: Redux Thunk or Redux Saga for handling side effects like asynchronous calls. 
+
+d: Controller Layer: 
+
+i. API Service Handlers: Abstracted layer for handling API requests (fetch, axios). 
+
+ii. Event Handling: WebSockets for real-time updates (e.g., bookings and reviews).
+
+e. Data Layer:
+
+i. Caching Strategies: SWR (stale-while-revalidate) for optimized data fetching. 
+
+ii. Schema Validation: JSON Schema or TypeScript interfaces. 
