@@ -333,3 +333,55 @@ Tools: Amazon S3, Azure Blob Storage.
 Scenario: Storing user-uploaded passport images or itineraries.
 
 Processing: Retrieve, update, or delete blobs as needed.
+
+
+## Unified e2e architecture
+
+![image](https://github.com/user-attachments/assets/16e004e4-5c79-48eb-9fa4-8ddfe4af2c07) 
+
+## Data Flow
+
+
+**Initial Request:**
+
+i. User interacts with Next.js/React app → Redux dispatches action
+
+ii. RTK Query/SWR checks cache → If stale/missing, fires GraphQL/Axios request
+
+**Authentication:**
+i. Auth0/OAuth tokens attached to requests via Axios interceptors
+
+ii. API Gateway validates JWT via Ory Hydra before routing
+
+**API Gateway Processing:**
+
+i. Kong routes to appropriate service (Search/Pricing/Booking)
+
+ii Rate limiting applied per client IP
+
+iii. Schema validation rejects malformed requests
+
+**Service Interaction:**
+
+i. Search: GraphQL queries hit Elasticsearch via Apollo Server
+
+ii. Booking: Axios REST calls trigger PostgreSQL transactions
+
+iii. Real-time Pricing: WebSocket connection to Kafka streams
+
+**Response Handling:**
+
+i. Successful responses cached in Redux/SWR
+
+ii. Errors captured by Sentry with user context
+
+iii. MSW intercepts requests in dev/staging environments
+
+**UI Update:**
+
+i. Tailwind/Material UI components re-render with new data
+
+ii. Loading states managed by RTK Query/SWR hooks
+
+iii. Persistent state (e.g., auth) stored securely via Keychain (iOS) or cookies (web)
+
