@@ -129,3 +129,29 @@ e. Data Layer:
 i. Caching Strategies: SWR (stale-while-revalidate) for optimized data fetching. 
 
 ii. Schema Validation: JSON Schema or TypeScript interfaces. 
+
+## . Challenges and Resolutions:
+- Challenge 1: Scalability
+
+i. 
+Issue: Handling millions of concurrent requests. 
+
+Resolution: Implement CDN, Redis caching, and Kubernetes autoscaling. 
+
+- Challenge 2: Real-Time Updates
+
+Issue: Booking and pricing require real-time data. 
+
+Resolution: Use WebSockets and Event-Driven Architecture (Microsercices, KAFKA) with message queues RabbitMQ. 
+
+- Challenge 3: Observability
+
+Issue: Monitoring user interactions and failures. 
+
+Resolution: Integrate Prometheus and ELK for real-time metrics and logs. 
+
+- Challenge 4: Security
+
+Issue: Authentication, data breaches, and fraud prevention. 
+
+Resolution: Role-based access, OAuth2/JWT, encryption (TLS), and WAF. 
