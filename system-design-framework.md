@@ -205,3 +205,131 @@ i. Conduct Penetration Testing and Vulnerability Scans (SONARQ). SENTRY for code
 
 ii. Ensure proper encryption (TLS) and secure secrets management.
 
+
+## Types of System Design Architectures
+
+**Monolithic Architecture:**
+
+i. All functionality is bundled into a single codebase.
+
+ii. Suitable for small teams or early-stage startups but lacks flexibility and scalability.
+
+**Service-Oriented Architecture (SOA):**
+
+i. Uses a shared bus for communication between services, unlike microservices, which prefer lightweight communication (e.g., REST, gRPC).
+
+**Event-Driven Architecture:**
+
+i. Services communicate by exchanging events via message brokers like Kafka /RbbitMQ.
+
+ii. Useful for systems that require asynchronous and real-time interactions.
+
+**Serverless Architecture:**
+
+i. Functions are deployed independently, and scaling is managed automatically by the cloud provider.
+
+ii. Ideal for reducing infrastructure management.
+
+**Microservices Architecture:**
+
+i. Services are independent, use APIs or message brokers for communication, and scale independently.
+
+ii. Best for large, distributed systems like Skyscanner, where scalability, modularity, and resilience are paramount.
+
+
+## Core Types of Data Structures
+
+**Key-Value Pairs**
+
+i. Use Case: Ideal for caching or storing session data, configuration settings, or any data that can be accessed with a unique key.
+
+ii. Example:
+
+Tools: Redis, DynamoDB.
+
+Scenario: Caching frequently accessed flight search results in Skyscanner.
+Processing: Retrieve and update values based on keys efficiently (O(1) operations).
+
+**JSON / BSON Documents**
+
+i. Use Case: Used for unstructured or semi-structured data in document stores.
+
+ii. Example:
+
+Tools: MongoDB, CouchDB.
+
+Scenario: Storing user travel preferences or booking details.
+
+Processing: Query and modify specific fields in the document, such as retrieving all bookings for a user.
+
+**Relational Tables**
+
+i. Use Case: For structured data requiring relationships between entities.
+
+ii. Example:
+Tools: PostgreSQL, MySQL.
+
+Scenario: Managing user accounts, bookings, and payments.
+
+Processing: Perform SQL operations like SELECT, JOIN, and GROUP BY to fetch or aggregate data.
+
+**Graphs**
+
+i. Use Case: For relationships and connections between entities.
+
+ii. Example:
+
+Tools: Neo4j, ArangoDB.
+
+Scenario: Representing and querying travel routes or user connections.
+
+Processing: Use graph traversal algorithms like Depth-First Search (DFS) or Breadth-First Search (BFS) for recommendations or shortest path discovery.
+
+**Queues**
+
+i. Use Case: For message passing and asynchronous processing.
+
+ii. Example:
+Tools: RabbitMQ, Amazon SQS, Kafka.
+
+Scenario: Processing price alerts or booking notifications in Skyscanner.
+
+Processing: Messages are enqueued by producers and dequeued by consumers for further handling.
+
+
+**Logs**
+
+i. Use Case: For sequential, append-only data.
+
+Example:
+
+Tools: Kafka, Elasticsearch.
+
+Scenario: Capturing user activity logs or transaction histories.
+Processing: Use batch processing or streaming frameworks (e.g., Apache Flink, Spark) to analyze logs in real-time.
+
+
+**Distributed Hash Tables**
+
+i. Use Case: For distributed storage of key-value data across nodes.
+
+ii. Example:
+
+Tools: Cassandra, DynamoDB.
+
+Scenario: Handling distributed storage of travel deals or search indexes.
+
+Processing: Partition and replicate data across nodes using consistent hashing.
+
+
+**Blob Storage**
+
+i. Use Case: For storing unstructured data like images, PDFs, or videos.
+
+ii. Example:
+
+Tools: Amazon S3, Azure Blob Storage.
+
+Scenario: Storing user-uploaded passport images or itineraries.
+
+Processing: Retrieve, update, or delete blobs as needed.
