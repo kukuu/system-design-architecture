@@ -385,3 +385,8 @@ ii. Loading states managed by RTK Query/SWR hooks
 
 iii. Persistent state (e.g., auth) stored securely via Keychain (iOS) or cookies (web)
 
+## Updated Architecture with Microservice modules
+
+![image](https://github.com/user-attachments/assets/f1a9f119-1e10-4522-93be-41908eb9a384)
+
+
