@@ -38,8 +38,9 @@ A modular approach allows for iterative development, making introducing new feat
 
 - Security: API Gateway and token-based authentication (OAuth2) ensure a secure entry.
 
+## Discovery
 
-## Types of System Design Architectures
+### Types of System Design Architectures
 
 **Monolithic Architecture:**
 
@@ -70,7 +71,7 @@ i. Services are independent, use APIs or message brokers for communication, and 
 ii. Best for large, distributed systems like Skyscanner, where scalability, modularity, and resilience are paramount.
 
 
-## Core Types of Data Structures
+### Core Types of Data Structures
 
 **Key-Value Pairs**
 
@@ -176,7 +177,7 @@ Processing: Retrieve, update, or delete blobs as needed.
 
 ![image](https://github.com/user-attachments/assets/eacba6c4-34f3-4743-ab27-2629509d7304)
 
-## Key Components (Frontend & Backend):
+### Key Components (Frontend & Backend):
 
 - Client Application (React, Next.js):
 
@@ -243,9 +244,9 @@ i. Docker for containerization, and migration to environments exporting consiste
 
 ii. Kubernetes for container orchestration, scaling, and failover. 
 
-## Component Breakdown:
+### Component Breakdown:
 
-### Frontend
+#### Frontend
 
 - UI Layer:
 
@@ -357,7 +358,7 @@ ii. Ensure proper encryption (TLS) and secure secrets management.
 
 
 
-## Unified e2e architecture
+### Unified e2e architecture
 
 ![image](https://github.com/user-attachments/assets/16e004e4-5c79-48eb-9fa4-8ddfe4af2c07) 
 
