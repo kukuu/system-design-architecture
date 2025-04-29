@@ -136,7 +136,7 @@ c: Middleware: Redux Thunk or Redux Saga for handling side effects like asynchro
 
 d: Controller Layer: 
 
-i. API Service Handlers: Abstracted layer for handling API requests (fetch, axios). 
+i. API Service Handlers: Abstracted layer for handling API requests (GraohQL,fetch, axios). 
 
 ii. Event Handling: WebSockets for real-time updates (e.g., bookings and reviews).
 
