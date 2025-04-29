@@ -180,6 +180,7 @@ Resolution: Role Based Access Control (RBAC), OAuth2/JWT, encryption (TLS), and 
 i. Jest and React Testing Library. 
 
 **- Integration Testing:**
+
 i. Cypress for end-to-end testing. 
 
 ii. Performance Testing: Load tests with JMeter. 
