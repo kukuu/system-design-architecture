@@ -142,9 +142,11 @@ ii. Event Handling: WebSockets for real-time updates (e.g., bookings and reviews
 
 e. Data Layer:
 
-i. Caching Strategies: SWR (stale-while-revalidate) for optimized data fetching. 
+i. Caching Strategies: RTK and SWR (stale-while-revalidate) for optimized data fetching. 
 
 ii. Schema Validation: JSON Schema or TypeScript interfaces. 
+
+iii. API request validation: JWT, OAuth
 
 ## . Challenges and Resolutions:
 - Challenge 1: Scalability
