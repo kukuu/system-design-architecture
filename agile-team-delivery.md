@@ -3,11 +3,9 @@
 **Case study:**
 
 
-You have been assigned to manage one squad struggling with performance; they’ve not had an Engineering Manager for a few months. You are responsible for creating a high-performing team that can deliver on its goals.
+_You have been assigned to manage one squad struggling with performance; they’ve not had an Engineering Manager for a few months. You are responsible for creating a high-performing team that can deliver on its goals. At Skyscanner, a squad is an agile product team with 6-8 engineers, led by an engineering manager; a tribe is a group of squads with similar product domains, usually led by an Engineering Director and a Product Director_ 
 
-_At Skyscanner, a squad is an agile product team with 6-8 engineers, led by an engineering manager; a tribe is a group of squads with similar product domains, usually led by an Engineering Director and a Product Director 
-
-There are 7 people in this squad:
+_There are 7 people in this squad:
 2 x graduates called Ben and Flo; Ben joined recently,
 2 x engineers, Lucy and Becka; Becka rotated in from another squad in the last month,
 2 x senior engineers, Valerie and Drew; Valerie has been in the squad for four years, Drew joined the company last year, and
@@ -17,8 +15,8 @@ The squad own a number of back-end services that are critical to Skyscanner; the
 The squad spend a lot of time on support issues. Each investigation can take a long time.
 The squad delivers very few new features/changes due to the load from the support requests
 Pressure is starting to mount from the tribe leadership team.
-The squad has been working on their current strategic project for almost a year which is longer than expected.''. Higlight in a couple of paragraphs and not too long by acknowledging the challenges in the team and  how you can make the team efficient, work towards a common goal and also what initial actions and plans you prioritise to streamline the team to align with the business challenges and meet stakeholders expectations.
-_ 
+The squad has been working on their current strategic project for almost a year which is longer than expected.''. Higlight in a couple of paragraphs and not too long by acknowledging the challenges in the team and  how you can make the team efficient, work towards a common goal and also what initial actions and plans you prioritise to streamline the team to align with the business challenges and meet stakeholders expectations._
+
 
 **Solution**:
 
