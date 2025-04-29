@@ -2,7 +2,9 @@
 
 _Case Study for online travel:_
 
-## Clarifying Questions & Assumptions
+## Discovery
+
+### Clarifying Questions & Assumptions
 
 **- Traffic Volume:**
 i. Are we handling 10K or 10M requests/sec? (Assume 50K RPS peak)
@@ -21,7 +23,7 @@ i. Latency SLA? (<200ms for Search, <1s for Booking)
 
 ii. Data consistency level? (Strong for Booking, eventual for Reviews)
 
-## Key PILLARS in the Architecture (SSREFOS)
+### Key PILLARS in the Architecture (SSREFOS)
 
 - Scalability:
 Independent scaling of microservices ensures that services can handle their unique workloads without impacting others.
@@ -38,7 +40,7 @@ A modular approach allows for iterative development, making introducing new feat
 
 - Security: API Gateway and token-based authentication (OAuth2) ensure a secure entry.
 
-## Discovery
+
 
 ### Types of System Design Architectures
 
