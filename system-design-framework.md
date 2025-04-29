@@ -4,18 +4,18 @@ _Case Study for online travel:_
 
 ## Clarifying Questions & Assumptions
 
-- Traffic Volume:
+**- Traffic Volume:**
 i. Are we handling 10K or 10M requests/sec? (Assume 50K RPS peak)
 
-i. What’s the read:write ratio? (Assume 80:20 for Search vs. Booking)
+ii. What’s the read:write ratio? (Assume 80:20 for Search vs. Booking)
 
-- Data Characteristics:
+**- Data Characteristics:**
 
 i. What’s the avg. payload size for Pricing/Booking? *(Assume 2KB/req)*
 
-ii. Do Reviews need real-time indexing? (Yes for recent reviews)
+ii. Do Reviews need real-time indexing? (Yes for recent reviews?)
 
-- Global Requirements:
+**- Global Requirements:**
 
 i. Latency SLA? (<200ms for Search, <1s for Booking)
 
