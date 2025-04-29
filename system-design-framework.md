@@ -45,7 +45,7 @@ A modular approach allows for iterative development, making introducing new feat
 
 ![image](https://github.com/user-attachments/assets/eacba6c4-34f3-4743-ab27-2629509d7304)
 
-## Key Components in the Frontend High-Level Design:
+## Key Components:
 
 - Client Application (React, Next.js):
 
