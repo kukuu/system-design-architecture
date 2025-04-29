@@ -20,11 +20,11 @@ The squad has been working on their current strategic project for almost a year 
 
 **Solution**:
 
-- Acknowledging Challenges:
+**- Acknowledging Challenges:**
 
 The squad faces three core issues: (1) unbalanced workloads from support demands stifling feature delivery, (2) lack of clear ownership due to interim leadership and role transitions, and (3) prolonged project timelines eroding stakeholder confidence. With critical back-end services and mounting tribal pressure, the priority is ‘’stabilizing operations while realigning the team toward strategic goals’’.
 
-- Initial Actions & Plan:
+**- Initial Actions & Plan:**
 
 i. Triage & Prioritization (Weeks 1-2):
 
