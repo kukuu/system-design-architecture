@@ -53,13 +53,24 @@ i. CSR (Client-Side Rendering - Loading on demand) and SSR (Server-Side Renderin
 
 ii. Tailwind CSS for styling and responsive design. 
 
+- State Management
+i. REDUX/Context API/MobX for centralised store: Action /Reducers
+
+ii. Data Fetch: GraphQL/AXIOS
+
+iii. Cache: RTK, SWR, Session storage, local storage
+
+iv. Control Logic for handling EVENTS and ACTIONS
+
 - API Gateway:
 
 i. Unified entry point for API calls. 
 
 ii. Load balancer for distributing traffic. 
 
-iii. Handles authentication, rate limiting, and CORS. 
+iii. Handles authentication, rate limiting (IP targeting), and CORS. 
+
+IV. Schema validation- JSON/TypeScript
 
 - Service Communication Layer:
 
