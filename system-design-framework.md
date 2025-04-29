@@ -25,7 +25,8 @@ ii. Data consistency level? (Strong for Booking, eventual for Reviews)
 
 - Scalability:
 Independent scaling of microservices ensures that services can handle their unique workloads without impacting others.
-Speed
+
+- Speed
 
 - Resilience:
 Asynchronous communication and circuit breakers mitigate the risk of cascading failures.
