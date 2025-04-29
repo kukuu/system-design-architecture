@@ -114,6 +114,8 @@ ii. Kubernetes for container orchestration, scaling, and failover. 
 
 ## Component Breakdown:
 
+### Frontend
+
 - UI Layer:
 
 i. Component Library (Storybook): Standardized UI components. 
