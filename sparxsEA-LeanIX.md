@@ -1,6 +1,6 @@
 # Core  Practices: SPARX EA & LeanIX integration
 
-As a Solutions Architect, leveraging Sparx EA and LeanIX effectively requires focusing on their distinct features to address various domains. Here's a structured breakdown:
+As a Solutions Architect, leveraging Sparx EA and LeanIX effectively requires focusing on their **distinct features** to address various domains. Here's a structured breakdown:
 
 ## Sparx EA  - Modeling & Design Focus
 
