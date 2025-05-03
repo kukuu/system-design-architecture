@@ -1,6 +1,9 @@
 # Core  Practices: SPARX EA & LeanIX integration
 
+**By focusing Sparx EA on design/execution and LeanIX on inventory/governance, you ensure alignment between technical depth and business oversight.**
 As a Solutions Architect, leveraging Sparx EA and LeanIX effectively requires focusing on their **distinct features** to address various domains. Here's a structured breakdown:
+
+_Tabular Format_ - https://chat.deepseek.com/a/chat/s/b916ce8c-af9b-4a13-a15c-eddda52ff4b1
 
 ## Sparx EA  - Modeling & Design Focus
 
@@ -158,4 +161,4 @@ Use: Design schemas for Informatica ETL workflows or SAP Business Objects cubes.
 
 - Example: Model a cloud migration in Sparx EA, then track its cost/risk in LeanIX.
 
-**By focusing Sparx EA on design/execution and LeanIX on inventory/governance, you ensure alignment between technical depth and business oversight.**
+
