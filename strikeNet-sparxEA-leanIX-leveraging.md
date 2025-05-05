@@ -24,3 +24,7 @@
 │  StrikeNet: IoT Sensors → Digital Twin → Kubernetes/AI → MoD Dashboards       │
 └───────────────────────────────────────────────────────────────────────────────┘
 ```
+
+
+## more.....
+https://github.com/kukuu/system-design-architecture/blob/master/sparxEA-lenIX-in-defence-projs.md
