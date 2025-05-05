@@ -77,3 +77,6 @@ _MRO in Your Projects:_
 └─────────────────┘    └─────────────────┘    └─────────────────┘
 
 ```
+
+## more....
+https://github.com/kukuu/system-design-architecture/blob/master/strikeNet-sparxEA-leanIX-leveraging.md
