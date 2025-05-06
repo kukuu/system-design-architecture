@@ -9,7 +9,7 @@ The architecture is made so the code structure can satisfy every software prereq
 
 You can use multiple patterns in a single system to optimize each section of  code with the best architecture.  
 
-## Basic Programming Principles Every Programmer Must Follow
+## Basic Programming Principles Every Programmer Must Follow 
 
 
 1. SOLID -The SOLID principles are a set of five design principles in software engineering that aim to create more maintainable, robust, flexible, extensible, and understandable code for object-oriented software systems and solve particular problems that might arise while developing  software systems. Each principle focuses on a specific aspect of software design and encourages practices that lead to modular and well-structured code. The five SOLID principles are:
