@@ -1,4 +1,4 @@
-# Modeling Cloud Migration in SPARX EA
+# Cloud  Migration Modelling with  SPARX EA
 
 SPARX EA is used to design, document, and visualize the migration process. Below are the steps:
 
