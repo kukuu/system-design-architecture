@@ -1,4 +1,4 @@
-# Cloud  Migration Modelling with  SPARX EA
+# Cloud  Migration Modelling with  SPARX EA and leanIX
 
 SPARX EA is used to design, document, and visualize the migration process. Below are the steps:
 
