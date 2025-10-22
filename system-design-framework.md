@@ -68,7 +68,7 @@ ii. Ideal for reducing infrastructure management.
 
 i. Services are independent, use APIs or message brokers for communication, and scale independently.
 
-ii. Best for large, distributed systems like Skyscanner, where scalability, modularity, and resilience are paramount.
+ii. Best for large, distributed systems where scalability, modularity, and resilience are paramount.
 
 
 ### Core Types of Data Structures
