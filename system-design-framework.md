@@ -1,8 +1,21 @@
 # System Design Framework
 
-_Case Study for online travel:_
+### Key PILLARS in the Architecture (SSREFOS)
 
-## Discovery
+- Scalability:
+Independent scaling of microservices ensures that services can handle their unique workloads without impacting others.
+
+- Speed
+
+- Resilience:
+Asynchronous communication and circuit breakers mitigate the risk of cascading failures.
+
+- Flexibility:
+A modular approach allows for iterative development, making introducing new features or updating existing ones easier.
+
+- Observability: Centralized logging and monitoring enable debugging and performance analysis for distributed services.
+
+- Security: API Gateway and token-based authentication (OAuth2) ensure a secure entry.
 
 ### Clarifying Questions & Assumptions
 
@@ -23,22 +36,7 @@ i. Latency SLA? (<200ms for Search, <1s for Booking)
 
 ii. Data consistency level? (Strong for Booking, eventual for Reviews)
 
-### Key PILLARS in the Architecture (SSREFOS)
 
-- Scalability:
-Independent scaling of microservices ensures that services can handle their unique workloads without impacting others.
-
-- Speed
-
-- Resilience:
-Asynchronous communication and circuit breakers mitigate the risk of cascading failures.
-
-- Flexibility:
-A modular approach allows for iterative development, making introducing new features or updating existing ones easier.
-
-- Observability: Centralized logging and monitoring enable debugging and performance analysis for distributed services.
-
-- Security: API Gateway and token-based authentication (OAuth2) ensure a secure entry.
 
 
 
