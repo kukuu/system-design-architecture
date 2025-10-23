@@ -220,6 +220,15 @@ ii. Role-based access control (RBAC). 
 
 iii. XSS and CSRF prevention.
 
+
+a. XSS Prevention: Escape/encode all user-controlled data before output and use Content Security Policy (CSP) headers
+
+b. CSRF Prevention: Implement anti-CSRF tokens in forms and use SameSite cookies
+
+c. Input Validation: Strictly validate and sanitize all user inputs on the server side
+
+d. Security Headers: Utilize HTTP security headers like X-Content-Type-Options and X-Frame-Options
+
 - Data Caching and CDN (Content Delivery Network):
 
 i. Redis or Varnish for caching frequently accessed data (kEY/VALUES). 
