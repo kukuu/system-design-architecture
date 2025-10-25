@@ -209,9 +209,9 @@
   - Dashboards: Tableau, Google Looker, Grafana
 
 - Real-time Alerting
-- Alert Management: PagerDuty, OpsGenie
-- Monitoring: Prometheus Alertmanager, CloudWatch Alarms
-- Notifications: Slack/MS Teams webhooks, Email/SMS
+  - Alert Management: PagerDuty, OpsGenie
+  - Monitoring: Prometheus Alertmanager, CloudWatch Alarms
+  - Notifications: Slack/MS Teams webhooks, Email/SMS
 
 ## Data Flow
 User Interaction → Behavior Tracking Service captures events
