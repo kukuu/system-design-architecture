@@ -27,7 +27,7 @@
  - Flexible omnichannel experiences
  - Future-proof technology stack
  - 
-## Architecture**
+## Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
