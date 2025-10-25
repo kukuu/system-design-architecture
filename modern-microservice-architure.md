@@ -95,51 +95,54 @@
     │  │• MongoDB    │  │• Elastic    │  │• Weaviate   │  │• Real-time  │  │
     │  │• Redis      │  │• Search     │  │• Embeddings │  │  Processing │  │
     │  └─────────────┘  └─────────────┘  └─────────────┘  └──────┬──────┘  │
-    │                                                            │         │
-    │  ┌─────────────┐                                  ┌───────▼───────┐  │
-    │  │   AI/ML     │                                  │  FEATURE      │  │
-    │  │  PLATFORM   │                                  │   STORE       │  │
-    │  │             │                                  │               │  │
-    │  │• Training   │                                  │• Real-time    │  │
-    │  │• Inference  │                                  │  Features     │  │
-    │  │• Monitoring │                                  │• Batch        │  │
-    │  └─────────────┘                                  │  Features     │  │
-    │                                                   └───────────────┘  │
-    └──────────────────────────────────────────────────────────────────────┘
-
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                         INFRASTRUCTURE & OBSERVABILITY                      │
-│                                                                             │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐        │
-│  │ KUBERNETES  │  │   SERVICE    │  │  MONITORING │  │    CI/CD    │        │
-│  │  CLUSTER    │  │   MESH      │  │   STACK     │  │  PIPELINE   │        │
-│  │             │  │             │  │             │  │             │        │
-│  │• Auto-scale │  │• Istio      │  │• Prometheus │  │• Jenkins    │        │
-│  │• Container  │  │• Circuit    │  │• Grafana    │  │• GitOps     │        │
-│  │• Orchestration│ │ Breakers   │  │• Jaeger     │  │• Automated  │        │
-│  └─────────────┘  └─────────────┘  └─────────────┘  └─────────────┘        │
-└─────────────────────────────────────────────────────────────────────────────┘
+    │                                  ┌─────────────┐           │         │
+    │  ┌─────────────┐                │  HEADLESS   │           │         │
+    │  │   AI/ML     │                │     CMS     │           │         │
+    │  │  PLATFORM   │                │             │           │         │
+    │  │             │                │• Contentful │           │         │
+    │  │• Training   │                │• Storyblok  │           │         │
+    │  │• Inference  │                │• Content    │           │         │
+    │  │• Monitoring │                │  Fragments  │           │         │
+    │  └─────────────┘                │• Promotions │           │         │
+    │                                 └──────┬──────┘           │         │
+    │                                        │                  │         │
+    │                                  ┌─────▼──────────────────▼─────┐   │
+    │                                  │        CONTENT SERVICE       │   │
+    │                                  │                              │   │
+    │                                  │• CMS Integration             │   │
+    │                                  │• Content Delivery            │   │
+    │                                  │• Personalization Rules       │   │
+    │                                  └──────────────────────────────┘   │
+    └─────────────────────────────────────────────────────────────────────┘
 
                                   DATA FLOW
 ┌───────────┐      ┌───────────┐      ┌───────────┐      ┌───────────┐
 │   USER    │─────▶│  TRACKING │─────▶│   EVENT   │─────▶│  AI/ML    │
 │ INTERACTION│     │  SERVICE  │     │ STREAMING │     │ PLATFORM  │
-└───────────┘      └───────────┘      └───────────┘      └───────────┘
+└───────────┘      └───────────┘      └────────────      └───────────┘
                                                               │
 ┌───────────┐      ┌───────────┐      ┌───────────┐          │
 │ RESPONSE  │◀────│    API     │◀────│RECOMMENDATION◀───────┘
 │ TO CLIENT │     │  GATEWAY   │     │  ENGINE    │
 └───────────┘      └───────────┘      └───────────┘
-                                 │
-                     ┌───────────┴───────────┐
-                     │                       │
-               ┌─────▼─────┐           ┌─────▼─────┐
-               │   USER    │           │  PRODUCT  │
-               │ PROFILES  │           │ CATALOG   │
-               │ DATABASE  │           │ DATABASE  │
-               └───────────┘           └───────────┘
-```
+                                 │              │
+                     ┌───────────┴───────────┐  │
+                     │                       │  │
+               ┌─────▼─────┐           ┌─────▼─────┐  ┌─────────────┐
+               │   USER    │           │  PRODUCT  │  │ CONTENT     │
+               │ PROFILES  │           │ CATALOG   │  │ SERVICE     │
+               │ DATABASE  │           │ DATABASE  │  │             │
+               └───────────┘           └───────────┘  └──────┬──────┘
+                                                              │
+                                                      ┌──────▼──────┐
+                                                      │ HEADLESS CMS│
+                                                      │             │
+                                                      │• Contentful │
+                                                      │• Storyblok  │
+                                                      │• Content    │
+                                                      └─────────────┘
 
+```
 ## Key Features with Technology Stack
 
 **Recommendation Types & Technologies**
