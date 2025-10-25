@@ -29,17 +29,6 @@
 - Flexibility: A modular approach allows for iterative development, making introducing new features or updating existing ones easier.
 - Observability: Centralized logging and monitoring enable debugging and performance analysis for distributed services.
 - Security: API Gateway and token-based authentication (OAuth2) ensure a secure entry point.
-
-## Benefits for Specsavers:
-
-- Marketing teams can quickly update promotional banners for frames, lens offers, or seasonal campaigns
-
-- Consistent content across all channels (web, mobile, in-store)
-
-- A/B testing of promotional content alongside product recommendations
-
-- Separation of content management from application logic
-
    
 
 
@@ -228,4 +217,13 @@ Ranking & Filtering → Business rules and personalization applied
 
 Response Delivery → Personalized suggestions to client applications
 
+## Benefits for Specsavers:
+
+- Marketing teams can quickly update promotional banners for frames, lens offers, or seasonal campaigns
+
+- Consistent content across all channels (web, mobile, in-store)
+
+- A/B testing of promotional content alongside product recommendations
+
+- Separation of content management from application logic
 
