@@ -137,9 +137,7 @@ Services communicate via REST APIs for synchronous requests and Apache Kafka for
 
 
 
-## Key Features with Technology Stack
-
-**Recommendation Types & Technologies**
+## Proposed Recommendation Types & Technologies
 
 - Collaborative Filtering - "Customers like you also bought..."
 
