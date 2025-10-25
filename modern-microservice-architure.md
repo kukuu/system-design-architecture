@@ -246,6 +246,9 @@
                   │    TO USER     │
                   └────────────────┘
 
+**Architecture Operation:**
+
+Services communicate via REST APIs for synchronous requests and Apache Kafka for asynchronous event streaming. The API Gateway (GraphQL/REST) routes client requests, while services exchange data through defined contracts. Real-time tracking events flow through Kafka to the AI platform, which updates recommendation models. Content Service syncs with Headless CMS via webhooks, and all services leverage Redis for caching to reduce latency.
    
 ## Benefits for Specsavers:
 
@@ -256,4 +259,12 @@
 - A/B testing of promotional content alongside product recommendations
 
 - Separation of content management from application logic
+
+**Challenges & Mitigation:**
+
+Key challenges include data consistency across distributed services, mitigated through event sourcing and eventual consistency; service orchestration complexity, addressed with Kubernetes and service mesh; and potential latency in real-time recommendations, solved with Redis caching and API gateway optimization.
+
+
+Security & Governance:
+OAuth2/JWT authentication secures API access, while TLS 1.3 encrypts data in transit. Role-based access control (RBAC) governs data permissions, and GDPR compliance ensures customer data protection. Centralized monitoring (Prometheus/Grafana) and API gateway rate limiting maintain system governance and prevent abuse.
 
