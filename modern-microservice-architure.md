@@ -215,7 +215,7 @@
 - Monitoring: Prometheus Alertmanager, CloudWatch Alarms
 - Notifications: Slack/MS Teams webhooks, Email/SMS
 
-Data Flow
+## Data Flow
 User Interaction → Behavior Tracking Service captures events
 
 Event Stream → Real-time processing and feature updates
@@ -230,4 +230,4 @@ Ranking & Filtering → Business rules and personalization applied
 
 Response Delivery → Personalized suggestions to client applications
 
-Implementation A
+
