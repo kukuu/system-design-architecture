@@ -177,62 +177,43 @@
    - Cloud: AWS Application Auto Scaling, Azure Autoscale
    - Metrics: Prometheus, Custom metrics adapter
 
-     Circuit Breakers
+- Circuit Breakers
 
-Libraries: Resilience4j, Netflix Hystrix
+  - Libraries: Resilience4j, Netflix Hystrix
+  - Service Mesh: Istio, Linkerd
+  - Implementation: Spring Boot, Envoy proxy
 
-Service Mesh: Istio, Linkerd
+- Fallback Mechanisms
+  - Caching: Redis cluster with failover
+  - CDN: AWS CloudFront, Akamai static content
+  - Strategy: Popular products cache, Static recommendations
 
-Implementation: Spring Boot, Envoy proxy
+- Multi-region Deployment
+  - Orchestration: Kubernetes Federation
+  - Networking: AWS Global Accelerator, Azure Traffic Manager
+  - Database: AWS Aurora Global, Google Cloud Spanner
 
-Fallback Mechanisms
+- Observability Technologies
+  - Performance Monitoring
+  - APM: Datadog, New Relic, Dynatrace
+  - Tracing: Jaeger, Zipkin, AWS X-Ray
+  - Metrics: Prometheus, Grafana dashboards
 
-Caching: Redis cluster with failover
+- Recommendation Quality
+  - ML Monitoring: MLflow, Evidently AI
+  - A/B Testing: Optimizely, Statsig, LaunchDarkly
+  - Metrics: CTR tracking, Conversion attribution
 
-CDN: AWS CloudFront, Akamai static content
+- Business Impact Tracking
 
-Strategy: Popular products cache, Static recommendations
+  - Analytics: Google Analytics 4, Adobe Analytics, Mixpanel
+  - Data Pipeline: Segment, Snowplow Analytics
+  - Dashboards: Tableau, Google Looker, Grafana
 
-Multi-region Deployment
-
-Orchestration: Kubernetes Federation
-
-Networking: AWS Global Accelerator, Azure Traffic Manager
-
-Database: AWS Aurora Global, Google Cloud Spanner
-
-Observability Technologies
-Performance Monitoring
-
-APM: Datadog, New Relic, Dynatrace
-
-Tracing: Jaeger, Zipkin, AWS X-Ray
-
-Metrics: Prometheus, Grafana dashboards
-
-Recommendation Quality
-
-ML Monitoring: MLflow, Evidently AI
-
-A/B Testing: Optimizely, Statsig, LaunchDarkly
-
-Metrics: CTR tracking, Conversion attribution
-
-Business Impact Tracking
-
-Analytics: Google Analytics 4, Adobe Analytics, Mixpanel
-
-Data Pipeline: Segment, Snowplow Analytics
-
-Dashboards: Tableau, Google Looker, Grafana
-
-Real-time Alerting
-
-Alert Management: PagerDuty, OpsGenie
-
-Monitoring: Prometheus Alertmanager, CloudWatch Alarms
-
-Notifications: Slack/MS Teams webhooks, Email/SMS
+- Real-time Alerting
+- Alert Management: PagerDuty, OpsGenie
+- Monitoring: Prometheus Alertmanager, CloudWatch Alarms
+- Notifications: Slack/MS Teams webhooks, Email/SMS
 
 Data Flow
 User Interaction → Behavior Tracking Service captures events
