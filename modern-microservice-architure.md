@@ -20,7 +20,13 @@
 - Observability: Centralized logging and monitoring enable debugging and performance analysis for distributed services.
 - Security: API Gateway and token-based authentication (OAuth2) ensure a secure entry point.
 
+**Benefits for Specsavers:**
 
+ - Faster feature development
+ - Better scalability during promotions
+ - Flexible omnichannel experiences
+ - Future-proof technology stack
+ - 
 **Architecture**
 
 ```
@@ -117,9 +123,4 @@
                │ DATABASE  │           │ DATABASE  │
                └───────────┘           └───────────┘
 ```
-**Benefits for Specsavers:**
 
- - Faster feature development
- - Better scalability during promotions
- - Flexible omnichannel experiences
- - Future-proof technology stack
