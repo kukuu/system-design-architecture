@@ -215,7 +215,7 @@ Services communicate via REST APIs for synchronous requests and Apache Kafka for
 
 
 
-**Security & Governance:**
+## Security & Governance:
 
 OAuth2/JWT authentication secures API access, while TLS 1.3 encrypts data in transit. Role-based access control (RBAC) governs data permissions, and GDPR compliance ensures customer data protection. Centralized monitoring (Prometheus/Grafana) and API gateway rate limiting maintain system governance and prevent abuse.
    
