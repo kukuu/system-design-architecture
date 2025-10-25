@@ -9,12 +9,7 @@
   - Cloud-native: SaaS, scalable, resilient
   - Headless: Frontend decoupled from backend
 
-**Benefits for Specsavers:**
 
- - Faster feature development
- - Better scalability during promotions
- - Flexible omnichannel experiences
- - Future-proof technology stack
 
 **Key PILLARS of any Modern Architecture**
 
@@ -122,3 +117,9 @@
                │ DATABASE  │           │ DATABASE  │
                └───────────┘           └───────────┘
 ```
+**Benefits for Specsavers:**
+
+ - Faster feature development
+ - Better scalability during promotions
+ - Flexible omnichannel experiences
+ - Future-proof technology stack
