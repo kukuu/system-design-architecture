@@ -9,7 +9,17 @@
   - Cloud-native: SaaS, scalable, resilient
   - Headless: Frontend decoupled from backend
 
+## Clarification Questions
 
+- What are the primary business goals for this feature - conversion uplift, AOV increase, or customer retention?
+
+- How will this system integrate with existing Specsavers systems like e-commerce, CRM, and inventory management?
+
+- What are the data privacy requirements and GDPR compliance needs for handling customer data?
+
+- What is the recommended placement strategy for recommendations across homepage, product pages, cart, and email?
+
+- What are the budget and timeline constraints for implementing this personalized recommendation system?
 
 ## Key PILLARS 
 
@@ -22,23 +32,16 @@
 
 ## Benefits for Specsavers:
 
- - Faster feature development
- - Better scalability during promotions
- - Flexible omnichannel experiences
- - Future-proof technology stack
+- Marketing teams can quickly update promotional banners for frames, lens offers, or seasonal campaigns
+
+- Consistent content across all channels (web, mobile, in-store)
+
+- A/B testing of promotional content alongside product recommendations
+
+- Separation of content management from application logic
 
    
-## Clarification Questions
 
-- What are the primary business goals for this feature - conversion uplift, AOV increase, or customer retention?
-
-- How will this system integrate with existing Specsavers systems like e-commerce, CRM, and inventory management?
-
-- What are the data privacy requirements and GDPR compliance needs for handling customer data?
-
-- What is the recommended placement strategy for recommendations across homepage, product pages, cart, and email?
-
-- What are the budget and timeline constraints for implementing this personalized recommendation system?
 
 ## Architecture
 
