@@ -26,7 +26,20 @@
  - Better scalability during promotions
  - Flexible omnichannel experiences
  - Future-proof technology stack
- - 
+
+   
+## Clarification Questions
+
+- What are the primary business goals for this feature - conversion uplift, AOV increase, or customer retention?
+
+- How will this system integrate with existing Specsavers systems like e-commerce, CRM, and inventory management?
+
+- What are the data privacy requirements and GDPR compliance needs for handling customer data?
+
+- What is the recommended placement strategy for recommendations across homepage, product pages, cart, and email?
+
+- What are the budget and timeline constraints for implementing this personalized recommendation system?
+
 ## Architecture
 
 ```
@@ -138,38 +151,33 @@
 
 - Content-Based - "Similar frames to your favorites"
 
-ML Tools: Facebook FAISS, Google Vertex AI
+  - ML Tools: Facebook FAISS, Google Vertex AI
+  - Storage: Pinecone/Weaviate vector database
+  - Processing: Cosine similarity, nearest neighbor search
 
-Storage: Pinecone/Weaviate vector database
+- Real-Time - "Based on your recent browsing"
 
-Processing: Cosine similarity, nearest neighbor search
+  - Streaming: Apache Kafka, AWS Kinesis, Apache Flink
 
-Real-Time - "Based on your recent browsing"
+  - Storage: Redis for session data, Apache Druid
 
-Streaming: Apache Kafka, AWS Kinesis, Apache Flink
+  - Processing: Real-time feature computation
 
-Storage: Redis for session data, Apache Druid
+- Trending - "Popular items in your area"
 
-Processing: Real-time feature computation
+  - Analytics: Apache Spark Streaming, Rockset
 
-Trending - "Popular items in your area"
+  - Storage: Elasticsearch, TimescaleDB
 
-Analytics: Apache Spark Streaming, Rockset
+  - Processing: Geographic trending algorithms
 
-Storage: Elasticsearch, TimescaleDB
+- Scalability & Resilience Technologies
+  - Auto-scaling
+   - Kubernetes: HPA (Horizontal Pod Autoscaler)
+   - Cloud: AWS Application Auto Scaling, Azure Autoscale
+   - Metrics: Prometheus, Custom metrics adapter
 
-Processing: Geographic trending algorithms
-
-Scalability & Resilience Technologies
-Auto-scaling
-
-Kubernetes: HPA (Horizontal Pod Autoscaler)
-
-Cloud: AWS Application Auto Scaling, Azure Autoscale
-
-Metrics: Prometheus, Custom metrics adapter
-
-Circuit Breakers
+     Circuit Breakers
 
 Libraries: Resilience4j, Netflix Hystrix
 
