@@ -95,9 +95,6 @@ Services communicate via REST APIs for synchronous requests and Apache Kafka for
 ```
 ## Data Flow
                      
-┌─────────────────────────────────────────────────────────────┐
-│                 DATA FLOW                                   │  
-└─────────────────────────────────────────────────────────────┘
 
                           ┌─────────────────┐
                           │   USER          │
