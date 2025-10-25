@@ -92,39 +92,53 @@ Services communicate via REST APIs for synchronous requests and Apache Kafka for
     │   Fragments    │                                  │ • Batch         │
     │ • Promotions   │                                  │   Features      │
     └────────────────┘                                  └─────────────────┘
-
-                              **DATA FLOW**
-                              ┌───────────┐
-                              │   USER    │
-                              │INTERACTION│
-                              └─────┬─────┘
-                                    │
-        ┌───────────────────────────┼───────────────────────────┐
-        │                           │                           │
-    ┌───▼───-┐                   ┌───▼───┐                   ┌───▼───┐
-    │BEHAVIOR│                   │ API   │                   │CONTENT│
-    │TRACKING│                   │GATEWAY│                   │SERVICE│
-    └───┬───-┘                   └──┬───-┘                   └──┬───-┘
-        │                           │                           │
-    ┌───▼───┐                   ┌───▼───┐                       │
-    │EVENT  │                   │USER   │                   ┌───▼───-┐
-    │STREAM │                   │PROFILE│                   │HEADLESS│
-    └───┬───┘                   └───-┬──┘                   │  CMS   │
-        │                            │                      └───────-┘
-    ┌───▼───-┐                   ┌───▼───┐
-    │ AI/ML  │                   │PRODUCT│
-    │PLATFORM│                   │CATALOG│
-    └───┬───┘                    └───┬───┘
-        │                            │
-    ┌───▼───────────────────────────-▼───┐
-    │      RECOMMENDATION ENGINE         │
-    └─────────────────┬─────────────────-┘
-                      │
-                 ┌────▼────┐
-                 │ RESPONSE│
-                 │ TO USER │
-                 └─────────┘
 ```
+      ## Data Flow                
+┌─────────────────────────────────────────────────────────────┐
+│                 OPTIMIZED DATA FLOW                         │
+└─────────────────────────────────────────────────────────────┘
+
+                          ┌─────────────────┐
+                          │   USER          │
+                          │  INTERACTION    │
+                          └────────┬────────┘
+                                   │
+              ┌────────────────────┼────────────────────┐
+              │                    │                    │
+         ┌────▼────┐         ┌─────▼─────┐        ┌─────▼─────┐
+         │BEHAVIOR │         │   API     │        │ CONTENT   │
+         │TRACKING │         │ GATEWAY   │        │ SERVICE   │
+         └────┬────┘         └─────┬─────┘        └─────┬─────┘
+              │                    │                    │
+         ┌────▼────┐         ┌─────▼─────┐        ┌─────▼─────┐
+         │ EVENT   │         │   USER    │        │ HEADLESS  │
+         │STREAMING│         │  PROFILE  │        │   CMS     │
+         └────┬────┘         └─────┬─────┘        └───────────┘
+              │                    │                    │
+         ┌────▼────┐         ┌─────▼─────┐              │
+         │ AI/ML   │         │  PRODUCT  │              │
+         │PLATFORM │         │  CATALOG  │              │
+         └────┬────┘         └─────┬─────┘              │
+              │                    │                    │
+              └────────┐     ┌─────┘                    │
+                       │     │                          │
+                  ┌────▼─────▼─────┐                    │
+                  │ RECOMMENDATION │◄───────────────────┘
+                  │   ENGINE       │
+                  └───────┬────────┘
+                          │
+                  ┌───────▼────────┐
+                  │     API        │
+                  │   GATEWAY      │
+                  └───────┬────────┘
+                          │
+                  ┌───────▼────────┐
+                  │    RESPONSE    │
+                  │    TO USER     │
+                  └────────────────┘
+
+
+
 ## Key Features with Technology Stack
 
 **Recommendation Types & Technologies**
@@ -202,51 +216,6 @@ Services communicate via REST APIs for synchronous requests and Apache Kafka for
   - Alert Management: PagerDuty, OpsGenie
   - Monitoring: Prometheus Alertmanager, CloudWatch Alarms
   - Notifications: Slack/MS Teams webhooks, Email/SMS
-
-## Data Flow
-┌─────────────────────────────────────────────────────────────┐
-│                 OPTIMIZED DATA FLOW                         │
-└─────────────────────────────────────────────────────────────┘
-
-                          ┌─────────────────┐
-                          │   USER          │
-                          │  INTERACTION    │
-                          └────────┬────────┘
-                                   │
-              ┌────────────────────┼────────────────────┐
-              │                    │                    │
-         ┌────▼────┐         ┌─────▼─────┐        ┌─────▼─────┐
-         │BEHAVIOR │         │   API     │        │ CONTENT   │
-         │TRACKING │         │ GATEWAY   │        │ SERVICE   │
-         └────┬────┘         └─────┬─────┘        └─────┬─────┘
-              │                    │                    │
-         ┌────▼────┐         ┌─────▼─────┐        ┌─────▼─────┐
-         │ EVENT   │         │   USER    │        │ HEADLESS  │
-         │STREAMING│         │  PROFILE  │        │   CMS     │
-         └────┬────┘         └─────┬─────┘        └───────────┘
-              │                    │                    │
-         ┌────▼────┐         ┌─────▼─────┐              │
-         │ AI/ML   │         │  PRODUCT  │              │
-         │PLATFORM │         │  CATALOG  │              │
-         └────┬────┘         └─────┬─────┘              │
-              │                    │                    │
-              └────────┐     ┌─────┘                    │
-                       │     │                          │
-                  ┌────▼─────▼─────┐                    │
-                  │ RECOMMENDATION │◄───────────────────┘
-                  │   ENGINE       │
-                  └───────┬────────┘
-                          │
-                  ┌───────▼────────┐
-                  │     API        │
-                  │   GATEWAY      │
-                  └───────┬────────┘
-                          │
-                  ┌───────▼────────┐
-                  │    RESPONSE    │
-                  │    TO USER     │
-                  └────────────────┘
-
 
 
 
