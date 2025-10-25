@@ -11,7 +11,7 @@
 
 
 
-## Key PILLARS of any Modern Architecture
+## Key PILLARS 
 
 - Scalability: Independent scaling of microservices ensures that services can handle their unique workloads without impacting others.
 - Speed: Optimized data flows and caching strategies enable real-time recommendations and fast response times.
