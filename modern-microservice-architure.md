@@ -203,20 +203,50 @@
   - Notifications: Slack/MS Teams webhooks, Email/SMS
 
 ## Data Flow
-User Interaction → Behavior Tracking Service captures events
+┌─────────────────────────────────────────────────────────────┐
+│                 OPTIMIZED DATA FLOW                         │
+└─────────────────────────────────────────────────────────────┘
 
-Event Stream → Real-time processing and feature updates
+                          ┌─────────────────┐
+                          │   USER          │
+                          │  INTERACTION    │
+                          └────────┬────────┘
+                                   │
+              ┌────────────────────┼────────────────────┐
+              │                    │                    │
+         ┌────▼────┐         ┌─────▼─────┐        ┌─────▼─────┐
+         │BEHAVIOR │         │   API     │        │ CONTENT   │
+         │TRACKING │         │ GATEWAY   │        │ SERVICE   │
+         └────┬────┘         └─────┬─────┘        └─────┬─────┘
+              │                    │                    │
+         ┌────▼────┐         ┌─────▼─────┐        ┌─────▼─────┐
+         │ EVENT   │         │   USER    │        │ HEADLESS  │
+         │STREAMING│         │  PROFILE  │        │   CMS     │
+         └────┬────┘         └─────┬─────┘        └───────────┘
+              │                    │                    │
+         ┌────▼────┐         ┌─────▼─────┐              │
+         │ AI/ML   │         │  PRODUCT  │              │
+         │PLATFORM │         │  CATALOG  │              │
+         └────┬────┘         └─────┬─────┘              │
+              │                    │                    │
+              └────────┐     ┌─────┘                    │
+                       │     │                          │
+                  ┌────▼─────▼─────┐                    │
+                  │ RECOMMENDATION │◄───────────────────┘
+                  │   ENGINE       │
+                  └───────┬────────┘
+                          │
+                  ┌───────▼────────┐
+                  │     API        │
+                  │   GATEWAY      │
+                  └───────┬────────┘
+                          │
+                  ┌───────▼────────┐
+                  │    RESPONSE    │
+                  │    TO USER     │
+                  └────────────────┘
 
-Recommendation Request → API Gateway routes to appropriate services
-
-Data Aggregation → User profile + product catalog + real-time context
-
-ML Inference → Multiple algorithms generate candidate recommendations
-
-Ranking & Filtering → Business rules and personalization applied
-
-Response Delivery → Personalized suggestions to client applications
-
+   
 ## Benefits for Specsavers:
 
 - Marketing teams can quickly update promotional banners for frames, lens offers, or seasonal campaigns
