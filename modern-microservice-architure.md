@@ -229,7 +229,7 @@ OAuth2/JWT authentication secures API access, while TLS 1.3 encrypts data in tra
 
 - Separation of content management from application logic
 
-## Challenges & Mitigation:**
+## Challenges & Mitigation:
 
 Key challenges include data consistency across distributed services, mitigated through event sourcing and eventual consistency; service orchestration complexity, addressed with Kubernetes and service mesh; and potential latency in real-time recommendations, solved with Redis caching and API gateway optimization.
 
