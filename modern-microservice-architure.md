@@ -2,7 +2,7 @@
 
 ## MACH-based Cloud Native Solution for Specsavers
 
-**MACH = Microservices + API-first + Cloud-native + Headless**
+**Microservices + API-first + Cloud-native + Headless**
   - Microservices: Independent, single-purpose services
 
   - API-first: All functionality exposed via APIs
