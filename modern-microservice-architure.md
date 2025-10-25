@@ -63,7 +63,7 @@ Services communicate via REST APIs for synchronous requests and Apache Kafka for
     │  │   USER      │  │  PRODUCT    │  │RECOMMENDATION│  │ BEHAVIOR    │ │
     │  │  PROFILE    │  │  CATALOG    │  │   ENGINE     │  │ TRACKING    │ │
     │  │ SERVICE     │  │ SERVICE     │  │              │  │ SERVICE     │ │
-    │  └──────┬──────┘  └──────┬──────┘  └──────┬──────-┘  └──────┬──────┘ │
+    │  └──────┬──────┘  └──────┬──────┘  └──────┬──────-┘  └─────┬──────-┘ │
     │         │                │                │                │         │
     └─────────┼────────────────┼────────────────┼────────────────┼────────-┘
               │                │                │                │
@@ -75,14 +75,14 @@ Services communicate via REST APIs for synchronous requests and Apache Kafka for
     │  │ PROFILES    │  │ CATALOG DB  │  │  DATABASE   │  │ STREAMING   │  │
     │  │  DATABASE   │  │             │  │             │  │   (Kafka)   │  │
     │  └─────────────┘  └─────────────┘  └─────────────┘  └──────┬──────┘  │
-    │                                                             │        │
+    │                                                            │         │
     │  ┌─────────────┐                                    ┌──────▼──────┐  │
     │  │   AI/ML     │                                    │  CONTENT    │  │
     │  │  PLATFORM   │                                    │  SERVICE    │  │
     │  └──────┬──────┘                                    └──────┬──────┘  │
-    │         │                                                   │        │
-    └─────────┼───────────────────────────────────────────────────┼───────-┘
-              │                                                   │
+    │         │                                                  │         │
+    └─────────┼──────────────────────────────────────────────────┼───────--┘
+              │                                                  │
     ┌─────────▼──────┐                                  ┌────────▼────────┐
     │  HEADLESS CMS  │                                  │   FEATURE       │
     │                │                                  │     STORE       │
@@ -93,9 +93,10 @@ Services communicate via REST APIs for synchronous requests and Apache Kafka for
     │ • Promotions   │                                  │   Features      │
     └────────────────┘                                  └─────────────────┘
 ```
-      ## Data Flow                
+## Data Flow
+                     
 ┌─────────────────────────────────────────────────────────────┐
-│                 OPTIMIZED DATA FLOW                         │
+│                 DATA FLOW                                   │  
 └─────────────────────────────────────────────────────────────┘
 
                           ┌─────────────────┐
