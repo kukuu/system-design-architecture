@@ -165,6 +165,10 @@ Services communicate via REST APIs for synchronous requests and Apache Kafka for
 
 - Vector Database: Similarity search for recommendations
 
+#### Deailed Breakdown Data Layer
+
+https://github.com/kukuu/system-design-architecture/blob/master/detailed-breakdown-data-layer-microservice.md
+
 ### AI/ML Layer
 
 - Real-time Inference: Immediate recommendation generation
