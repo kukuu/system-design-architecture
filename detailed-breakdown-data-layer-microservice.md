@@ -41,3 +41,95 @@ Inventory data (stock levels, availability, restock dates)
 
 Pricing information (regular price, promotions, tiered pricing)
 
+Product attributes (frame material, lens type, size, color, brand)
+
+Media assets (product images, 3D models, virtual try-on data)
+
+Taxonomy data (categories, subcategories, product relationships)
+
+Data Integrity & Consistency:
+
+ACID Compliance: Strong consistency for inventory and pricing
+
+Data Validation: Constraint checking and referential integrity
+
+Master Data Management: Single source of truth for product information
+
+Cache Invalidation: Real-time cache updates for price/availability changes
+
+Audit Trail: Complete change history for compliance and debugging
+
+Schema Management:
+
+Migration Scripts: Version-controlled database migrations
+
+Blue-Green Deployments: Zero-downtime schema changes
+
+Data Quality Monitoring: Automated checks for completeness and accuracy
+
+User Profiles: Customer Preferences and History
+Data Types:
+
+Demographic information (age, location, preferences)
+
+Behavioral data (browsing patterns, purchase history, returns)
+
+Preference data (style preferences, brand affinities, price sensitivity)
+
+Prescription data (eye test results, prescription history)
+
+Service history (appointments, adjustments, repairs)
+
+Consent management (marketing preferences, data sharing consent)
+
+Data Integrity & Security:
+
+PII Encryption: Field-level encryption for sensitive data
+
+Data Minimization: Collection of only necessary user data
+
+Consent Management: Granular consent tracking and enforcement
+
+Access Logging: Comprehensive audit trails for data access
+
+Data Retention: Automated purging based on retention policies
+
+Schema Evolution:
+
+Flexible Schemas: JSONB columns for evolving user attributes
+
+Feature Flags: Gradual rollout of new data fields
+
+Backfill Processes: Automated data migration for schema changes
+
+Vector Database: Similarity Search for Recommendations
+Data Types:
+
+Product embeddings (numerical representations of product features)
+
+User embeddings (numerical representations of user preferences)
+
+Session embeddings (real-time user interaction patterns)
+
+Content embeddings (textual descriptions, image features)
+
+Cluster assignments (product and user segmentations)
+
+Data Integrity & Consistency:
+
+Embedding Validation: Dimensionality checks and normalization
+
+Version Control: Model version tracking for embeddings
+
+Consistency Checks: Regular validation between source data and embeddings
+
+Data Freshness: Automated re-embedding based on data changes
+
+Schema Management:
+
+Model Versioning: Track embedding model versions and performance
+
+A/B Testing: Multiple embedding versions for experimentation
+
+Rollback Strategies: Quick reversion to previous embedding models
+
