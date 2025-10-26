@@ -3,9 +3,8 @@
 
 - Event Streaming: Real-time User Behavior Tracking
   - Data Types:
-   - Clickstream events (page views, product clicks, search queries)
-
-Session interactions (time spent, scroll depth, mouse movements)
+     1. Clickstream events (page views, product clicks, search queries)
+     2. Session interactions (time spent, scroll depth, mouse movements)
 
 Conversion events (add to cart, purchases, wishlist additions)
 
