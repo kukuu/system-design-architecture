@@ -30,12 +30,12 @@
 ├─────────────────┬─────────────────┬─────────────────┬──────────────────────────┤
 │ • Schema        │ • ACID Compliance│ • PII Encryption│ • Embedding             │
 │   Validation    │ • Data Validation│ • Data          │   Validation            │
-│ • Data Cleansing│ • Master Data   │   Minimization   │ • Version Control       │
-│ • PII Protection│   Management    │ • Consent        │ • Consistency           │
+│ • Data Cleansing│ • Master Data    │   Minimization  │ • Version Control       │
+│ • PII Protection│   Management     │ • Consent       │ • Consistency           │
 │ • GDPR Compliance│ • Cache         │   Management    │   Checks                │
-│ • Encryption    │   Invalidation  │ • Access Logging │ • Data Freshness        │
-│ • Access Control│ • Audit Trail   │ • Data Retention │                         │
-└─────────────────┴─────────────────┴─────────────────┴──────────────────────────┘
+│ • Encryption    │   Invalidation   │ • Access Logging│ • Data Freshness        │
+│ • Access Control│ • Audit Trail    │ • Data Retention│                         │
+└─────────────────┴──────────────────┴─────────────────┴─────────────────────────┘
          │                   │                   │                   │
 ┌────────▼───────────────────▼───────────────────▼───────────────────▼───────────┐
 │                         SCHEMA MANAGEMENT                                      │
