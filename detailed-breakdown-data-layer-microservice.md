@@ -1,5 +1,5 @@
 # Microservice Data Layer Detailed Breakdown
-
+```
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │                     DETAILED DATA LAYER ARCHITECTURE                        │
 │                         High-Level Breakdown                                │
@@ -86,7 +86,7 @@
                    │ • A/B Testing Framework        │
                    └────────────────────────────────┘
 
-
+```
 - Event Streaming: Real-time User Behavior Tracking
   - Data Types:
      1. Clickstream events (page views, product clicks, search queries)
