@@ -93,6 +93,26 @@ Services communicate via REST APIs for synchronous requests and Apache Kafka for
     │ • Promotions   │                                  │   Features      │
     └────────────────┘                                  └─────────────────┘
 ```
+
+### Core Components
+
+- Microservices Layer
+
+- User Profile Service: Customer preferences and history
+
+- Product Catalog Service: Glasses, lenses, and accessories data
+
+- Recommendation Engine: Generates personalized suggestions
+
+- Behavior Tracking Service: Captures browsing and purchase events
+
+- Content Service: Manages promotional content and assets
+
+
+
+
+
+
 ## Data Flow
                      
 
