@@ -1,4 +1,6 @@
 # Microservice Data Layer Detailed Breakdown
+
+
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │                     DETAILED DATA LAYER ARCHITECTURE                        │
@@ -87,3 +89,60 @@
                    └────────────────────────────────┘
 
 ```
+- Event Streaming Layer
+
+  - Data Types: Clickstream, session interactions, conversion events, authentication events
+
+  - Security: JSON schema validation, PII tokenization, GDPR compliance, TLS 1.3 encryption
+
+  - Evolution: Avro schemas with schema registry and data contracts
+
+- Product Database
+
+  - Data Types: Master data, inventory, pricing, attributes, media assets, taxonomy
+
+  - Consistency: ACID compliance, master data management, real-time cache invalidation
+
+  - Management: Versioned migrations, blue-green deployments, quality monitoring
+
+- User Profiles
+
+  - Data Types: Demographics, behavior, preferences, prescription history, consent
+
+  - Security: Field-level PII encryption, data minimization, granular consent management
+
+  - Evolution: Flexible JSONB schemas, feature flags, automated backfill processes
+
+- Vector Database
+
+  - Data Types: Product, user, session, and content embeddings; cluster assignments
+
+  - Consistency: Embedding validation, version control, data freshness checks
+
+  - Management: Model versioning, A/B testing, rollback strategies
+
+- Key Integration Points
+
+  - Real-time event streaming feeds AI/ML platform for model training
+
+  - Product database serves catalog service with strong consistency
+
+  - User profiles enable personalized recommendations with privacy protection
+
+  - Vector database powers similarity search and real-time inference
+
+  - All data layers maintain schema evolution and quality governance
+
+- Security & Compliance Framework
+
+  - End-to-end encryption with RBAC access controls
+
+  - GDPR-compliant data lifecycle management
+
+  - Comprehensive audit trails across all data stores
+
+  - Automated data quality and consistency monitoring
+
+**Conclusion**:
+
+The architecture ensures scalable, secure data management while maintaining data integrity across all microservices for real-time personalized recommendations.
