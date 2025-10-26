@@ -155,7 +155,23 @@ Services communicate via REST APIs for synchronous requests and Apache Kafka for
                   │    TO USER     │
                   └────────────────┘
 
+### Data Layer
 
+- Event Streaming: Real-time user behavior tracking
+
+- Product Database: Complete catalog with attributes
+
+- User Profiles: Customer preferences and history
+
+- Vector Database: Similarity search for recommendations
+
+### AI/ML Layer
+
+- Real-time Inference: Immediate recommendation generation
+
+- Model Training: Batch processing for algorithm improvement
+
+- Feature Store: Consolidated data for ML models
 
 ## Proposed Recommendation Types & Technologies
 
