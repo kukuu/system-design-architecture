@@ -59,7 +59,7 @@ Addressing Customer first: The **containerized Kubernetes foundation ensures ela
 - Despite its robust design, the architecture introduces inherent complexities that require proactive management through well-defined governance and monitoring strategies. Key challenges include:
 
   - Distributed System Complexity:
-   - Risk: Microservices introduce network latency and potential cascade failures
+    1. Risk: Microservices introduce network latency and potential cascade failures
 
 Mitigation: Implement service mesh (Istio) with circuit breakers and comprehensive distributed tracing
 
