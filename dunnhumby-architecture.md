@@ -64,20 +64,17 @@ Addressing Customer first: The **containerized Kubernetes foundation ensures ela
 
   - Data Consistency & Compliance:
     1. Risk: GDPR/CCPA compliance across distributed data stores
+      - Mitigation: Centralized data governance with PII masking and encryption at rest/transit
 
-Mitigation: Centralized data governance with PII masking and encryption at rest/transit
+- Operational Overhead:
 
-Operational Overhead:
+  - Challenge: Managing 20+ microservices requires sophisticated DevOps maturity
+    1. Address: Invest in platform engineering with standardized service templates and automated CI/CD
 
-Challenge: Managing 20+ microservices requires sophisticated DevOps maturity
+- Security Attack Surface:
 
-Address: Invest in platform engineering with standardized service templates and automated CI/CD
-
-Security Attack Surface:
-
-Vulnerability: Expanded API endpoints increase potential breach points
-
-Protection: Zero-trust architecture with API gateway security policies and regular penetration testing
+  - Vulnerability: Expanded API endpoints increase potential breach points
+    - Protection: Zero-trust architecture with API gateway security policies and regular penetration testing
 
 ## Conclusion:
 Continuous improvement requires establishing metrics-driven feedback loops—monitoring business KPIs (conversion rates, personalization effectiveness) alongside technical SLOs (latency, error rates)—to iteratively refine both architecture and implementation, ensuring the platform evolves in lockstep with Dunnhumby's strategic retail analytics objectives while maintaining operational excellence.
