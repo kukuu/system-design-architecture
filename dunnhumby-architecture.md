@@ -60,12 +60,10 @@ Addressing Customer first: The **containerized Kubernetes foundation ensures ela
 
   - Distributed System Complexity:
     1. Risk: Microservices introduce network latency and potential cascade failures
+      - Mitigation: Implement service mesh (Istio) with circuit breakers and comprehensive distributed tracing
 
-Mitigation: Implement service mesh (Istio) with circuit breakers and comprehensive distributed tracing
-
-Data Consistency & Compliance:
-
-Risk: GDPR/CCPA compliance across distributed data stores
+  - Data Consistency & Compliance:
+    1. Risk: GDPR/CCPA compliance across distributed data stores
 
 Mitigation: Centralized data governance with PII masking and encryption at rest/transit
 
