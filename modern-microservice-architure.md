@@ -23,12 +23,12 @@
 
 ## Key PILLARS 
 
-- Scalability: Independent scaling of microservices ensures that services can handle their unique workloads without impacting others.
-- Speed: Optimized data flows and caching strategies enable real-time recommendations and fast response times.
-- Resilience: Asynchronous communication and circuit breakers mitigate the risk of cascading failures.
-- Flexibility: A modular approach allows for iterative development, making introducing new features or updating existing ones easier.
-- Observability: Centralized logging and monitoring enable debugging and performance analysis for distributed services.
-- Security: API Gateway and token-based authentication (OAuth2) ensure a secure entry point.
+- **Scalability**: Independent scaling of microservices ensures that services can handle their unique workloads without impacting others.
+- **Speed**: Optimized data flows and caching strategies enable real-time recommendations and fast response times.
+- **Resilience**: Asynchronous communication and circuit breakers mitigate the risk of cascading failures.
+- **Flexibility**: A modular approach allows for iterative development, making introducing new features or updating existing ones easier.
+- **Observability**: Centralized logging and monitoring enable debugging and performance analysis for distributed services.
+- **Security**: API Gateway and token-based authentication (OAuth2) ensure a secure entry point.
    
 
 
