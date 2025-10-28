@@ -224,7 +224,7 @@ https://github.com/kukuu/system-design-architecture/blob/master/detailed-breakdo
 
 **1. AI/ML Platform: The "Brain" for Personalization**
    
-The AI/ML Platform is the **intelligent core** that processes data to generate **insights**  and **predictions**. Its primary role is to move the system from being reactive ("show product X") to being proactive ("we recommend product X for you").
+The AI/ML Platform is the **intelligent core** that processes data to generate **insights**  and **predictions**. Its primary role is to move the system from being **reactive** ("show product X") to being **proactive** ("we recommend product X for you").
 
 _How it correlates with other components:_
 
