@@ -153,7 +153,15 @@ Real-time tracking events flow through Kafka to the AI platform, which updates r
 
 
 
+### Data Layer
 
+- Event Streaming: Real-time user behavior tracking
+
+- Product Database: Complete catalog with attributes
+
+- User Profiles: Customer preferences and history
+
+- Vector Database: Similarity search for recommendations
 
 
 ## Data Flow
@@ -198,15 +206,7 @@ Real-time tracking events flow through Kafka to the AI platform, which updates r
                   │    TO USER     │
                   └────────────────┘
 
-### Data Layer
 
-- Event Streaming: Real-time user behavior tracking
-
-- Product Database: Complete catalog with attributes
-
-- User Profiles: Customer preferences and history
-
-- Vector Database: Similarity search for recommendations
 
 #### Deailed Breakdown Data Layer
 
