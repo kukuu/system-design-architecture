@@ -102,13 +102,13 @@ Real-time tracking events flow through Kafka to the AI platform, which updates r
 
 - Microservices Layer
 
-- User Profile Service: Customer preferences and history
+  - User Profile Service: Customer preferences and history
 
-- Product Catalog Service: Glasses, lenses, and accessories data
+  - Product Catalog Service: Glasses, lenses, and accessories data
 
-- Recommendation Engine: Generates personalized suggestions
+  - Recommendation Engine: Generates personalized suggestions
 
-- Behavior Tracking Service: Captures browsing and purchase events
+  - Behavior Tracking Service: Captures browsing and purchase events
 
 - Content Service: Manages promotional content and assets
 
