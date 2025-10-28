@@ -67,7 +67,7 @@
                     │ SERVICE                 │
                     └─────────────────────────┘
 
-JWT processing at each microservice
+
 
 ```
 
