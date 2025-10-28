@@ -30,9 +30,48 @@
 - **Observability**: Centralized logging and monitoring enable debugging and performance analysis for distributed services.
 - **Security**: API Gateway and token-based authentication (OAuth2) ensure a secure entry point.
    
+## High Level Architecture
 
+```
+┌─────────────────┐
+│   MOBILE CLIENT │
+└─────────────────┘
+         ├───────────────────────┐
+         │                       │
+    (Access Token)         (Sends JWT)
+         │                       │
+         ▼                       ▼
+┌──────────────────┐ JWT ┌──────────────────┐
+│ AUTHORIZATION    │◄────│   API GATEWAY   │
+│ SERVER           │────►│                  │
+└──────────────────┘     └──────────────────┘
+         │                      │
+         │ (Access Token)       │ (JWT)
+         ▼                      ▼
+┌──────────────────┐    ┌──────────────────┐
+│   USER STORE     │    │    REST API      │
+│                  │    │                  │
+└──────────────────┘    └──────────────────┘
+                                │
+                                │ (JWT / REST API)
+                                ▼
+                    ┌─────────────────────────┐
+                    │ USER PROFILE SERVICE    │
+                    ├─────────────────────────┤
+                    │ PRODUCT CATALOG SERVICE │
+                    ├─────────────────────────┤
+                    │ RECOMMENDATION ENGINE   │
+                    │ SERVICE                 │
+                    ├─────────────────────────┤
+                    │ BEHAVIOR TRACKING       │
+                    │ SERVICE                 │
+                    └─────────────────────────┘
 
-## Architecture
+JWT processing at each microservice
+
+```
+
+## Low LevelArchitecture
 
 ### Service Communication 
 Services communicate via **REST APIs for synchronous requests** and **Apache Kafka for asynchronous event streaming**. The **API Gateway (GraphQL/REST) routes client requests****, while **services** exchange data through defined **contracts**.
