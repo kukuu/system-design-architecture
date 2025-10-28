@@ -242,7 +242,7 @@ _How it correlates with other components:_
 
   - To Vector Database: It transforms unstructured data (like product descriptions, user reviews, or content from the CMS) into numerical representations (vectors). This enables powerful semantic search (e.g., "find me durable glasses for running") and similarity matching.
 
-**Conclusion**: The AI/ML platform consumes user, product, and behavioral data to create models that enable personalized recommendations and intelligent search.
+
 
 **2. Headless CMS: The "Centralized Content Hub"**
 
@@ -319,5 +319,7 @@ Key challenges include data consistency across distributed services, mitigated t
 
 
 ## Conclusion:
+
+ The AI/ML platform consumes user, product, and behavioral data to create models that enable personalized recommendations and intelligent search.
 
 The architecture ensures  a personalised product recommendations architecture and data management while maintaining data integrity across all microservices for real-time personalized recommendations.
