@@ -215,7 +215,14 @@ _Its role in this architecture:_
 
 - Content Agility: It allows marketers and content editors to create and update content without needing a full software deployment.
 
+**3. Content Service: The "Content Delivery Bridge"**
 
+The Content Service is a crucial microservice  sits between the Headless CMS and the rest of the application.
+
+- Its role is to:
+  - Fetch Content: Pull content from the Headless CMS via its APIs.
+  - Transform & Structure: Process the raw content from the CMS into a format that the front-end applications expect.
+  - Serve Content: Expose this content internally, likely through the API Gateway, so that the Web App, Mobile App, etc., can consume it.
 
 ## Proposed Recommendation Types & Technologies
 
