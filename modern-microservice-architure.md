@@ -265,7 +265,7 @@ The Content Service is a crucial microservice  sits between the Headless CMS and
   - Transform & Structure: Process the raw content from the CMS into a format that the front-end applications expect.
   - Serve Content: Expose this content internally, likely through the API Gateway, so that the Web App, Mobile App, etc., can consume it.
  
-4. Putting it all together: The Powerful Synergy
+**4. Putting it all together: The Powerful Synergy**
 
 This is  a sophisticated data flow that enables hyper-personalization.
 
