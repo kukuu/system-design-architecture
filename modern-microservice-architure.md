@@ -259,15 +259,7 @@ https://github.com/kukuu/system-design-architecture/blob/master/AI-recommendatio
 
 OAuth2/JWT authentication secures API access, while TLS 1.3 encrypts data in transit. Role-based access control (RBAC) governs data permissions, and GDPR compliance ensures customer data protection. Centralized monitoring (Prometheus/Grafana) and API gateway rate limiting maintain system governance and prevent abuse.
    
-## Benefits for Specsavers:
 
-- Marketing teams can quickly update promotional banners for frames, lens offers, or seasonal campaigns
-
-- Consistent content across all channels (web, mobile, in-store)
-
-- A/B testing of promotional content alongside product recommendations
-
-- Separation of content management from application logic
 
 ## Challenges & Mitigation:
 
@@ -280,3 +272,13 @@ Key challenges include data consistency across distributed services, mitigated t
  The AI/ML platform consumes user, product, and behavioral data to create models that enable personalized recommendations and intelligent search.
 
 The architecture ensures  a personalised product recommendations architecture and data management while maintaining data integrity across all microservices for real-time personalized recommendations.
+
+### Benefits for Specsavers:
+
+- Marketing teams can quickly update promotional banners for frames, lens offers, or seasonal campaigns
+
+- Consistent content across all channels (web, mobile, in-store)
+
+- A/B testing of promotional content alongside product recommendations
+
+- Separation of content management from application logic
