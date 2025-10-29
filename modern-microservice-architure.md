@@ -206,10 +206,11 @@ Services communicate via **REST APIs for synchronous requests** and **Apache Kaf
                   │    TO USER     │
                   └────────────────┘
 
+**Real Time Tracking:**
 
 Real-time tracking events flow through Kafka to the AI platform, which updates recommendation models. Content Service syncs with Headless CMS via webhooks, and all services leverage Redis for caching to reduce latency.
 
-#### Deailed Breakdown Data Layer
+#### Detailed Breakdown Data Layer
 
 https://github.com/kukuu/system-design-architecture/blob/master/detailed-breakdown-data-layer-microservice.md
 
