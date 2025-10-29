@@ -143,6 +143,10 @@
 
   - Automated data quality and consistency monitoring
 
+**Synergies of Content negotiation:**
+
+https://github.com/kukuu/system-design-architecture/blob/master/AI-recommendation-synergies.md
+
 **Conclusion**:
 
 The architecture ensures scalable, secure data management while maintaining data integrity across all microservices for real-time personalized recommendations.
