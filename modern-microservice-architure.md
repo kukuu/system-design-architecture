@@ -257,9 +257,7 @@ This sophisticated data flow that enables hyper-personalization.
   - The AI/ML platform can convert this text into vectors and store it in the Vector Database.
   - This allows the Recommendation Engine to perform semantic searches. For example, if a user reads a blog post about "sustainable products," the engine can find and recommend eyewear made from recycled materials because it understands the semantic link between the content and the products.
 
-## Proposed Recommendation Types & Technologies
 
-https://github.com/kukuu/system-design-architecture/blob/master/recommendations-proposed-types-and-technologies.md
 
 ## Security & Governance:
 
@@ -333,4 +331,6 @@ The Content Service is a crucial microservice  sits between the Headless CMS and
   - Transform & Structure: Process the raw content from the CMS into a format that the front-end applications expect.
   - Serve Content: Expose this content internally, likely through the API Gateway, so that the Web App, Mobile App, etc., can consume it.
  
+## Proposed Recommendation Types & Technologies
 
+https://github.com/kukuu/system-design-architecture/blob/master/recommendations-proposed-types-and-technologies.md
