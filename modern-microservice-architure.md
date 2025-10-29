@@ -73,6 +73,20 @@
 
 ## Low LevelArchitecture
 
+### Core Components
+
+- Microservices Layer
+
+  - User Profile Service: Customer preferences and history
+
+  - Product Catalog Service: Glasses, lenses, and accessories data
+
+  - Recommendation Engine: Generates personalized suggestions
+
+  - Behavior Tracking Service: Captures browsing and purchase events
+
+- Content Service: Manages promotional content and assets
+
 ### Service Communication 
 Services communicate via **REST APIs for synchronous requests** and **Apache Kafka for asynchronous event streaming**. The **API Gateway (GraphQL/REST) routes client requests**, while **services** exchange data through defined **contracts**.
 
@@ -92,7 +106,7 @@ Real-time tracking events flow through Kafka to the AI platform, which updates r
        └────────────────┼────────────────┼────────────────┘
                         │                │
                  ┌──────▼────────────────▼──────┐
-                 │         API GATEWAY          │
+                 │         API GATEWAY          │                                                     
                  │  ┌────────────────────────┐  │
                  │  │ GraphQL • REST • Auth  │  │
                  │  │ Rate Limiting • Caching│  │
@@ -137,19 +151,6 @@ Real-time tracking events flow through Kafka to the AI platform, which updates r
     └────────────────┘                                  └─────────────────┘
 ```
 
-### Core Components
-
-- Microservices Layer
-
-  - User Profile Service: Customer preferences and history
-
-  - Product Catalog Service: Glasses, lenses, and accessories data
-
-  - Recommendation Engine: Generates personalized suggestions
-
-  - Behavior Tracking Service: Captures browsing and purchase events
-
-- Content Service: Manages promotional content and assets
 
 
 
