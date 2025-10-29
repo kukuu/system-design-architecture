@@ -1,4 +1,4 @@
-# Proposed Recommendation Types & Technologies
+# Recommendation Types & Technologies
 
 - **Collaborative Filtering** - "Customers like you also bought..."
 
