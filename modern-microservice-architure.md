@@ -255,7 +255,9 @@ This sophisticated data flow that enables hyper-personalization.
   - The AI/ML platform can convert this text into vectors and store it in the Vector Database.
   - This allows the Recommendation Engine to perform semantic searches. For example, if a user reads a blog post about "sustainable products," the engine can find and recommend eyewear made from recycled materials because it understands the semantic link between the content and the products.
 
+### Synergies : Content Creation
 
+https://github.com/kukuu/system-design-architecture/blob/master/AI-recommendation-synergies.md
 
 ## Security & Governance:
 
