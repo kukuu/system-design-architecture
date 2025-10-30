@@ -115,6 +115,9 @@ Microservices are self contained processes that provides unique business capabil
 
 With Monoliths, minor changes to particular parts of the application, may require a re-deployment of the whole application. Delta changes cannot be detected. Not very good for scaling and performance.
 
+- Modern Microservice with AI/ML:
+Recommendation Engine: https://github.com/kukuu/AI-ML-recommendation-personalised-product/blob/main/README.md
+
 - https://github.com/kukuu/system-design-architecture/blob/master/microservices-main.png
 
 - https://github.com/kukuu/microservices
