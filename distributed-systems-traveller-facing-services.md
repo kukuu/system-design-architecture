@@ -188,7 +188,7 @@ Security   Security     Auth/Throttle   Encryption   AuthZ/N     Encryption  GDP
 ```                  
 ## Technology Stack Summary
 
-```
+
 ## Technology Stack
 
 | Layer | Component | Technology | Purpose | Key Features |
@@ -220,7 +220,7 @@ Security   Security     Auth/Throttle   Encryption   AuthZ/N     Encryption  GDP
 | **Global Scale** | CDN | Cloudflare | Content delivery | Edge caching |
 | | DNS | Route 53 | Traffic routing | GeoDNS, Health checks |
 | | Multi-region DB | CockroachDB | Global data | Strong consistency |
-```
+
 ## Conclusion
 
 This stack balances performance, resilience, and operational maturity, similar to what large-scale travel tech companies (like Booking.com, Expedia) use in production.
