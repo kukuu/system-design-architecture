@@ -81,7 +81,7 @@ Service	Recommended Technologies
 
 **CI/CD & Ops**:	Kubernetes, ArgoCD, LaunchDarkly
 
-## Key Architectural Principles for Skyscanner:
+## Key Architectural Principles:
 
 - Stateless services wherever possible.
 
