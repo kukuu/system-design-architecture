@@ -119,46 +119,157 @@ Service	Recommended Technologies
 │   │      Core Microservices        │                            │
 │   ├─────────────┬──────────────────┤                            │
 │   │             │                  │                            │
-│   │   ┌─────────▼────────┐  ┌─────▼────────┐                   │
-│   │   │    Search &      │  │   Booking &  │                   │
+│   │   ┌─────────▼────────┐  ┌─────▼────────┐                    │
+│   │   │    Search &      │  │   Booking &  │                    │
 │   │   │   Discovery      │  │  Reservation  │                   │
 │   │   │                  │  │               │                   │
-│   │   └─────────┬────────┘  └─────┬────────┘                   │
+│   │   └─────────┬────────┘  └─────┬────────┘                    │
 │   │             │                  │                            │
 │   │   ┌─────────▼──────────────────▼────────┐                   │
 │   │   │     User & Personalization          │                   │
-│   │   │      Pricing & Inventory             │                   │
+│   │   │      Pricing & Inventory             │                  │
 │   │   └─────────────────┬───────────────────┘                   │
 │   │                     │                                       │
 │   └─────────────────────▼───────────────────┐                   │
 │                                             │                   │
 │   ┌─────────────────────────────────────────▼─────────────┐     │
-│   │            Event Bus (Kafka)                         │     │
-│   │    ┌──────┬──────┬──────┬──────┬──────┐              │     │
+│   │            Event Bus (Kafka)                          │      │
+│   │    ┌──────┬──────┬──────┬──────┬──────┐               │      │
 │   │    │Search│Booking│ User │ Price│ Audit│              │     │
 │   │    │Events│Events │Events│Updates│Logs │              │     │
-│   │    └──────┴──────┴──────┴──────┴──────┘              │     │
+│   │    └──────┴──────┴──────┴──────┴──────┘               │      │
 │   └─────────────┬─────────────────────────────┬───────────┘     │
 │                 │                             │                 │
-│   ┌─────────────▼──────────┐    ┌────────────▼──────────┐      │
-│   │   Stream Processing    │    │      Data Stores      │      │
-│   │   • Real-time Analytics│    │  • PostgreSQL         │      │
-│   │   • ML Feature Updates │    │  • Elasticsearch      │      │
-│   │   • Cache Warming      │    │  • Redis              │      │
-│   └────────────────────────┘    └───────────────────────┘      │
+│   ┌─────────────▼──────────┐    ┌────────────▼──────────┐       │
+│   │   Stream Processing    │    │      Data Stores      │       │
+│   │   • Real-time Analytics│    │  • PostgreSQL         │       │
+│   │   • ML Feature Updates │    │  • Elasticsearch      │       │
+│   │   • Cache Warming      │    │  • Redis              │       │
+│   └────────────────────────┘    └───────────────────────┘       │
 │                                                                 │
 ├─────────────────────────────────────────────────────────────────┤
 │                  Infrastructure & Observability                 │
-│   ┌─────────┬─────────┬─────────┬─────────┬─────────┐          │
-│   │ Metrics │ Tracing │ Logging │ Alerting│  Chaos  │          │
-│   │(Prom/G) │(Jaeger) │  (ELK)  │(PagerD)│  Engine │          │
-│   └─────────┴─────────┴─────────┴─────────┴─────────┘          │
+│   ┌─────────┬─────────┬─────────┬─────────┬─────────┐           │
+│   │ Metrics │ Tracing │ Logging │ Alerting│  Chaos  │           │
+│   │(Prom/G) │(Jaeger) │  (ELK)  │(PagerD)│  Engine  │           │
+│   └─────────┴─────────┴─────────┴─────────┴─────────┘           │
 │                                                                 │
 │   Global Distribution: Multi-Region K8s + CDN + GeoDNS          │
 └─────────────────────────────────────────────────────────────────┘
 
 ```
 
-##Conclusion
+
+- Frontend → API Gateway → Core Services
+
+  - Event Bus connects everything
+  - Data layer for storage and analytics
+  - Observability built-in
+
+
+
+## Low level Architecture
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│               SEARCH SERVICE - DETAILED FLOW                │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│    Client Request                                           │
+│        │                                                   │
+│        ▼                                                   │
+│    ┌──────────┐                                            │
+│    │ API      │                                            │
+│    │ Gateway  │─┐                                          │
+│    └──────────┘ │                                          │
+│        │        │                                          │
+│    Cache Check  │                                          │
+│        ├────────┘                                          │
+│        │                                                   │
+│    ┌───▼───┐     Cache Hit?     ┌────────────┐            │
+│    │ Redis │◄─── YES ───────────┤  Return    │            │
+│    │Cache  │                    │  Cached    │◄────────┐  │
+│    └───┬───┘                    │  Results   │         │  │
+│        │ NO                     └────────────┘         │  │
+│        ▼                                                   │
+│    ┌──────────┐                                            │
+│    │ Search   │                                            │
+│    │ Service  │                                            │
+│    │ (Golang) │                                            │
+│    └────┬─────┘                                            │
+│         │                                                  │
+│    ┌────▼─────┐   Parallel Requests                       │
+│    │ Query    │───────────────────┐                       │
+│    │ Splitter │                   │                       │
+│    └────┬─────┘                   ▼                       │
+│         │                  ┌─────────────┐                │
+│    ┌────▼─────┐            │ External    │                │
+│    │Elastic-  │            │ Airlines &  │                │
+│    │search    │            │ Partners    │                │
+│    │(Internal)│            └──────┬──────┘                │
+│    └────┬─────┘                   │                       │
+│         │                         │                       │
+│    ┌────▼─────────────────────────▼─────┐                 │
+│    │      Results Aggregator             │                 │
+│    │ ┌─────────────────────────────┐    │                 │
+│    │ │ • Merge & Rank              │    │                 │
+│    │ │ • Personalize               │    │                 │
+│    │ │ • Filter & Sort             │    │                 │
+│    │ └─────────────────────────────┘    │                 │
+│    └────────────┬────────────────────────┘                 │
+│                 │                                          │
+│    ┌────────────▼─────────┐                               │
+│    │   Response Builder   │                               │
+│    │                      │                               │
+│    └────────────┬─────────┘                               │
+│                 │                                          │
+│            ┌────▼─────┐       Write Back                  │
+│            │  Final   ├───────┬───────────────────────┐   │
+│            │ Response │       │                       │   │
+│            └────┬─────┘       ▼                       ▼   │
+│                 │        ┌──────────┐         ┌──────────┐│
+│                 └───────►│  Redis   │         │  Kafka   ││
+│                To Client │ (Cache)  │         │(Analytics)│
+│                          └──────────┘         └──────────┘│
+│                                                           │
+├───────────────────────────────────────────────────────────┤
+│                 INFRASTRUCTURE DETAILS                    │
+│                                                           │
+│  Kubernetes Pod Structure:                                │
+│  ┌─────────────────────────────────────────────┐         │
+│  │  Search Service Pod                         │         │
+│  │  ┌─────────┬─────────┬─────────┬─────────┐ │         │
+│  │  │  Main   │ Service │  Log    │ Tracing │ │         │
+│  │  │  App    │  Mesh   │ Collector│ Agent   │ │         │
+│  │  │ (Go)    │ (Envoy) │ (Fluent)│(Jaeger) │ │         │
+│  │  └─────────┴─────────┴─────────┴─────────┘ │         │
+│  └─────────────────────────────────────────────┘         │
+│                                                           │
+│  Data Layer:                                              │
+│  ┌─────────────────────────────────────────────┐         │
+│  │  Elasticsearch Cluster                      │         │
+│  │  ┌─────┬─────┬─────┬─────┬─────┬─────┐     │         │
+│  │  │ M1  │ D1  │ D2  │ M2  │ D3  │ I1  │     │         │
+│  │  │(Mstr)│(Data)│(Data)│(Mstr)│(Data)│(Ingest)│     │         │
+│  │  └─────┴─────┴─────┴─────┴─────┴─────┘     │         │
+│  └─────────────────────────────────────────────┘         │
+│                                                           │
+│  Resilience Features:                                     │
+│  • Circuit Breakers for external calls                    │
+│  • Automatic retries with exponential backoff             │
+│  • Rate limiting per partner                              │
+│  • Timeout handling                                       │
+│                                                           │
+└───────────────────────────────────────────────────────────┘
+```
+Low-Level (Search):
+
+- Cache-first approach
+- Parallel processing of queries
+- Aggregate & rank results
+- Async operations for cache update and analytics
+- Resilience patterns throughout
+
+## Conclusion
 
 This stack balances performance, resilience, and operational maturity, similar to what large-scale travel tech companies (like Booking.com, Expedia) use in production.
