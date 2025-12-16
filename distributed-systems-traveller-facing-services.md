@@ -175,8 +175,52 @@ Low-Level (Search):
 - Async operations for cache update and analytics
 - Resilience patterns throughout
 
+
+## Data Flow
+
+''`
+Client → CDN → API Gateway → Service Mesh → Microservices → Data Layer → Analytics
+     ↑        ↑            ↑             ↑             ↑           ↑          ↑
+Security   Security     Auth/Throttle   Encryption   AuthZ/N     Encryption  GDPR
+   │           │              │             │           │           │         │
+   └───────────┴──────────────┴─────────────┴───────────┴───────────┴─────────┘
+                     Continuous Security & Observability
+```                  
 ## Technology Stack Summary
 
+```
+## Technology Stack
+
+| Layer | Component | Technology | Purpose | Key Features |
+|-------|-----------|------------|---------|--------------|
+| **Frontend** | Web Application | React/Next.js | Dynamic UI | SSR, Component-based |
+| | Mobile Apps | React Native | Cross-platform | Single codebase |
+| **API Layer** | API Gateway | Envoy Proxy | Request routing | Rate limiting, Circuit breaking |
+| | GraphQL | Apollo Federation | Flexible queries | Schema stitching |
+| **Core Services** | Search Service | Golang + gRPC | Flight search | High concurrency, Low latency |
+| | Booking Service | Java + Spring Boot | Transactions | ACID, Saga pattern |
+| | Pricing Service | Python + FastAPI | Dynamic pricing | ML integration |
+| | User Service | Node.js + TypeScript | User management | JWT, Profiles |
+| **Data Layer** | Primary Database | PostgreSQL | Transactional data | ACID, Replication |
+| | Search Engine | Elasticsearch | Full-text search | Real-time indexing |
+| | Cache | Redis Cluster | Session/data cache | Sub-millisecond |
+| | Analytics DB | ClickHouse | Analytics queries | Columnar storage |
+| **Event System** | Message Queue | Apache Kafka | Event streaming | High throughput |
+| | Stream Processing | Apache Flink | Real-time analytics | Stateful computations |
+| **Infrastructure** | Orchestration | Kubernetes | Container management | Auto-scaling |
+| | Service Mesh | Istio | Service communication | mTLS, Traffic control |
+| | CI/CD | GitHub Actions + ArgoCD | Deployment | GitOps, Rollbacks |
+| | Monitoring | Prometheus + Grafana | Metrics | Alerting, Dashboards |
+| **Security** | Web Security | Cloudflare WAF | Threat protection | DDoS mitigation |
+| | Secrets Management | HashiCorp Vault | Secrets storage | Encryption, Rotation |
+| | Authentication | Auth0/Keycloak | Identity management | OAuth2, SSO |
+| **Observability** | Logging | ELK Stack | Centralized logs | Search, Visualization |
+| | Tracing | Jaeger | Distributed tracing | Latency analysis |
+| | Alerting | PagerDuty | Incident response | On-call management |
+| **Global Scale** | CDN | Cloudflare | Content delivery | Edge caching |
+| | DNS | Route 53 | Traffic routing | GeoDNS, Health checks |
+| | Multi-region DB | CockroachDB | Global data | Strong consistency |
+```
 ## Conclusion
 
 This stack balances performance, resilience, and operational maturity, similar to what large-scale travel tech companies (like Booking.com, Expedia) use in production.
