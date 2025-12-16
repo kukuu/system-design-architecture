@@ -12,14 +12,11 @@ For  core traveller-facing services — which require high availability, low lat
       -  Deployment: Kubernetes with auto-scaling based on query load.
 
 - 2. User Session & Personalization
-Problem: Managing user sessions, saved searches, trip preferences, and personalized recommendations.
-
-Recommendation:
-State Storage: Redis (persistent) or DynamoDB (if AWS) for low-latency user profiles.
-
-Recommendations: ML models served via TensorFlow Serving or Kubernetes Custom Pods with online inference.
-
-Data Pipeline: User events → Kafka → stream processing (Apache Flink or KSQL) → real-time profile updates.
+  - Problem: Managing user sessions, saved searches, trip preferences, and personalized recommendations.
+  - Recommendation:
+    - State Storage: Redis (persistent) or DynamoDB (if AWS) for low-latency user profiles.
+    - Recommendations: ML models served via TensorFlow Serving or Kubernetes Custom Pods with online inference.
+    - Data Pipeline: User events → Kafka → stream processing (Apache Flink or KSQL) → real-time profile updates.
 
 3. Booking & Reservation Service
 Problem: ACID transactions, idempotency, and integration with multiple payment and airline reservation systems.
