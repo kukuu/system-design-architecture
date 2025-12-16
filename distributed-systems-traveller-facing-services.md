@@ -186,7 +186,6 @@ Security   Security     Auth/Throttle   Encryption   AuthZ/N     Encryption  GDP
    └───────────┴──────────────┴─────────────┴───────────┴───────────┴─────────┘
                      Continuous Security & Observability
 ```                  
-## Technology Stack Summary
 
 
 ## Technology Stack
@@ -220,6 +219,32 @@ Security   Security     Auth/Throttle   Encryption   AuthZ/N     Encryption  GDP
 | **Global Scale** | CDN | Cloudflare | Content delivery | Edge caching |
 | | DNS | Route 53 | Traffic routing | GeoDNS, Health checks |
 | | Multi-region DB | CockroachDB | Global data | Strong consistency |
+
+## Security Architecture
+
+| Layer | Security Component | Security Technology | Purpose | Key Features |
+|-------|-------------------|---------------------|---------|--------------|
+| **Edge Security** | Web Application Firewall | Cloudflare WAF | Threat protection | SQL injection prevention, XSS blocking |
+| | DDoS Protection | AWS Shield / Cloudflare | Availability protection | Volumetric attack mitigation |
+| | Bot Management | Cloudflare Bot Management | Fraud prevention | Scraping protection, bot detection |
+| **API Security** | Authentication Gateway | Auth0 / Keycloak | Identity management | OAuth2, SSO, MFA support |
+| | API Security | Envoy with ExtAuthz | Request validation | JWT validation, rate limiting |
+| | Rate Limiting | Redis Rate Limiter | Abuse prevention | Token bucket algorithm |
+| **Service Security** | Service-to-Service Auth | Istio mTLS | Internal encryption | Automatic certificate rotation |
+| | Network Policies | Calico / Cilium | Microsegmentation | Network isolation, egress control |
+| | Secrets Management | HashiCorp Vault | Credential storage | Dynamic secrets, encryption |
+| **Data Security** | Encryption at Rest | AWS KMS / Azure Key Vault | Data protection | AES-256 encryption |
+| | Encryption in Transit | TLS 1.3 | Secure communication | Perfect forward secrecy |
+| | Database Security | PostgreSQL RLS | Access control | Row-level security, auditing |
+| **Compliance** | Audit Logging | ELK Stack + Splunk | Accountability | Immutable audit trails |
+| | Data Masking | Delphix / Native DB | Privacy protection | Dynamic data masking |
+| | Retention Management | Automated Policies | Legal compliance | GDPR/CCPA compliance |
+| **Monitoring** | Security Monitoring | Wazuh / Splunk ES | Threat detection | Real-time alerting |
+| | Vulnerability Scanning | Snyk / Trivy | Code security | SAST/DAST integration |
+| | Secret Detection | GitGuardian / TruffleHog | Secret prevention | Pre-commit validation |
+| **Infrastructure** | Container Security | Kubernetes Pod Security | Runtime security | Security contexts |
+| | Image Security | Docker Content Trust | Supply chain security | Signed images |
+| | Network Security | Network Policies | Isolation | Namespace isolation |
 
 ## Conclusion
 
