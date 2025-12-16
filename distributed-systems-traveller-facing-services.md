@@ -61,18 +61,26 @@ For  core traveller-facing services — which require high availability, low lat
     - Orchestration: Kubernetes with Helm charts.
     - GitOps: ArgoCD for continuous deployment.
     - Feature Flags: LaunchDarkly for controlled rollouts.
-```
-**Summary Table**
+
+Summary Table
 Service	Recommended Technologies
-Search & Discovery	Golang/Java, Elasticsearch, Redis, Kafka, Kubernetes
-User & Personalization	Redis/DynamoDB, Kafka, Flink, TensorFlow Serving
-Booking Engine	PostgreSQL, Redis (idempotency), Kafka (events), Saga pattern
-Pricing & Availability	Kafka, Redis, Event-driven updates
-API Gateway	Envoy/Kong, GraphQL Federation, CDN
-Observability	Prometheus/Grafana, Jaeger, ELK Stack
-Global Data	CockroachDB/YugabyteDB, Multi-region K8s, GeoDNS
-CI/CD & Ops	Kubernetes, ArgoCD, LaunchDarkly
-```
+
+**Search & Discovery**:	Golang/Java, Elasticsearch, Redis, Kafka, Kubernetes
+
+**User & Personalization**:	Redis/DynamoDB, Kafka, Flink, TensorFlow Serving
+
+**Booking Engine**:	PostgreSQL, Redis (idempotency), Kafka (events), Saga pattern
+
+**Pricing & Availability**:	Kafka, Redis, Event-driven updates
+
+**API Gateway**: 	Envoy/Kong, GraphQL Federation, CDN
+
+**Observability**:	Prometheus/Grafana, Jaeger, ELK Stack
+
+**Global Data**:	CockroachDB/YugabyteDB, Multi-region K8s, GeoDNS
+
+**CI/CD & Ops**:	Kubernetes, ArgoCD, LaunchDarkly
+
 ## Key Architectural Principles for Skyscanner:
 
 - Stateless services wherever possible.
@@ -86,6 +94,70 @@ CI/CD & Ops	Kubernetes, ArgoCD, LaunchDarkly
 - A/B testing & gradual rollouts for all user-facing changes.
 
 - Data locality to comply with GDPR and reduce latency.
+
+## Low Level Architecture
+
+```
+
+┌─────────────────────────────────────────────────────────────────┐
+│                   TRAVELLER-FACING SERVICES                     │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│           Clients                                               │
+│      ┌────────┬────────┬────────┐                              │
+│      │ Mobile │  Web   │  API   │                              │
+│      │  App   │  App   │ Partners│                              │
+│      └───┬────┴───┬────┴───┬────┘                              │
+│          │        │        │                                   │
+│   ┌──────▼────────▼────────▼──────┐                            │
+│   │     API Gateway & Edge Layer   │                            │
+│   │  • Routing • Auth • Rate Limit │                            │
+│   │  • GraphQL • Caching           │                            │
+│   └──────────────┬─────────────────┘                            │
+│                  │                                              │
+│   ┌──────────────▼─────────────────┐                            │
+│   │      Core Microservices        │                            │
+│   ├─────────────┬──────────────────┤                            │
+│   │             │                  │                            │
+│   │   ┌─────────▼────────┐  ┌─────▼────────┐                   │
+│   │   │    Search &      │  │   Booking &  │                   │
+│   │   │   Discovery      │  │  Reservation  │                   │
+│   │   │                  │  │               │                   │
+│   │   └─────────┬────────┘  └─────┬────────┘                   │
+│   │             │                  │                            │
+│   │   ┌─────────▼──────────────────▼────────┐                   │
+│   │   │     User & Personalization          │                   │
+│   │   │      Pricing & Inventory             │                   │
+│   │   └─────────────────┬───────────────────┘                   │
+│   │                     │                                       │
+│   └─────────────────────▼───────────────────┐                   │
+│                                             │                   │
+│   ┌─────────────────────────────────────────▼─────────────┐     │
+│   │            Event Bus (Kafka)                         │     │
+│   │    ┌──────┬──────┬──────┬──────┬──────┐              │     │
+│   │    │Search│Booking│ User │ Price│ Audit│              │     │
+│   │    │Events│Events │Events│Updates│Logs │              │     │
+│   │    └──────┴──────┴──────┴──────┴──────┘              │     │
+│   └─────────────┬─────────────────────────────┬───────────┘     │
+│                 │                             │                 │
+│   ┌─────────────▼──────────┐    ┌────────────▼──────────┐      │
+│   │   Stream Processing    │    │      Data Stores      │      │
+│   │   • Real-time Analytics│    │  • PostgreSQL         │      │
+│   │   • ML Feature Updates │    │  • Elasticsearch      │      │
+│   │   • Cache Warming      │    │  • Redis              │      │
+│   └────────────────────────┘    └───────────────────────┘      │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                  Infrastructure & Observability                 │
+│   ┌─────────┬─────────┬─────────┬─────────┬─────────┐          │
+│   │ Metrics │ Tracing │ Logging │ Alerting│  Chaos  │          │
+│   │(Prom/G) │(Jaeger) │  (ELK)  │(PagerD)│  Engine │          │
+│   └─────────┴─────────┴─────────┴─────────┴─────────┘          │
+│                                                                 │
+│   Global Distribution: Multi-Region K8s + CDN + GeoDNS          │
+└─────────────────────────────────────────────────────────────────┘
+
+```
 
 ##Conclusion
 
