@@ -1,5 +1,4 @@
-# Robust, Scalable, and Reliable Distributed Systems for Core Traveller-facing Services.
-
+# Core Traveller-facing Services:  Robust, Scalable, and Reliable Distributed Systems
 For  core traveller-facing services — which require high availability, low latency, real-time search/booking, and massive scale — here’s a modern, battle-tested stack recommendation, focusing on robustness, scalability, and reliability.
 
 - 1. Search & Discovery Service
