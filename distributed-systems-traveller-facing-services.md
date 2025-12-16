@@ -3,18 +3,13 @@
 For  core traveller-facing services — which require high availability, low latency, real-time search/booking, and massive scale — here’s a modern, battle-tested stack recommendation, focusing on robustness, scalability, and reliability.
 
 - 1. Search & Discovery Service
-Problem: Real-time flight/price searches across hundreds of providers, with complex filtering and ranking.
-
-Recommendation:
-Backend: Golang or Java (with reactive frameworks like Vert.x/Project Reactor) for high concurrency and low GC pauses.
-
-Caching: Redis Cluster for caching aggregated itineraries, airline responses, and session data.
-
-Search Engine: Elasticsearch for filtering, sorting, and fast full-text search on destinations/airports.
-
-Async Processing: Apache Kafka for publishing search events, pricing updates, and integrating with analytics.
-
-Deployment: Kubernetes with auto-scaling based on query load.
+    - Problem: Real-time flight/price searches across hundreds of providers, with complex filtering and ranking.
+    - Recommendation:
+      - Backend: Golang or Java (with reactive frameworks like Vert.x/Project Reactor) for high concurrency and low GC pauses.
+      -  Caching: Redis Cluster for caching aggregated itineraries, airline responses, and session data.
+      -  Search Engine: Elasticsearch for filtering, sorting, and fast full-text search on destinations/airports.
+      -  Async Processing: Apache Kafka for publishing search events, pricing updates, and integrating with analytics.
+      -  Deployment: Kubernetes with auto-scaling based on query load.
 
 - 2. User Session & Personalization
 Problem: Managing user sessions, saved searches, trip preferences, and personalized recommendations.
