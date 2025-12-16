@@ -166,7 +166,7 @@ Service	Recommended Technologies
   - Data layer for storage and analytics
   - Observability built-in
 
-```
+
 Low-Level (Search):
 
 - Cache-first approach
@@ -174,6 +174,8 @@ Low-Level (Search):
 - Aggregate & rank results
 - Async operations for cache update and analytics
 - Resilience patterns throughout
+
+## Technology Stack Summary
 
 ## Conclusion
 
