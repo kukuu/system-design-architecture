@@ -178,7 +178,7 @@ Low-Level (Search):
 
 ## Data Flow
 
-''`
+```
 Client → CDN → API Gateway → Service Mesh → Microservices → Data Layer → Analytics
      ↑        ↑            ↑             ↑             ↑           ↑          ↑
 Security   Security     Auth/Throttle   Encryption   AuthZ/N     Encryption  GDPR
