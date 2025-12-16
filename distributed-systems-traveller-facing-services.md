@@ -61,7 +61,8 @@ For  core traveller-facing services — which require high availability, low lat
     - GitOps: ArgoCD for continuous deployment.
     - Feature Flags: LaunchDarkly for controlled rollouts.
 
-Summary Table
+## Summary Table
+
 Service	Recommended Technologies
 
 **Search & Discovery**:	Golang/Java, Elasticsearch, Redis, Kafka, Kubernetes
